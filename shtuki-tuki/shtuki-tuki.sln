@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "shtuki-tuki.web", "shtuki-tuki.web\shtuki-tuki.web.csproj", "{739DC154-77C4-497F-BED0-4DAFD6BB81F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "shtuki-tuki.domain", "shtuki-tuki.domain\shtuki-tuki.domain.csproj", "{1D869A77-7CAC-4B3C-9A5D-A9A44FD58392}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{739DC154-77C4-497F-BED0-4DAFD6BB81F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{739DC154-77C4-497F-BED0-4DAFD6BB81F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{739DC154-77C4-497F-BED0-4DAFD6BB81F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{739DC154-77C4-497F-BED0-4DAFD6BB81F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D869A77-7CAC-4B3C-9A5D-A9A44FD58392}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D869A77-7CAC-4B3C-9A5D-A9A44FD58392}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D869A77-7CAC-4B3C-9A5D-A9A44FD58392}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D869A77-7CAC-4B3C-9A5D-A9A44FD58392}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
