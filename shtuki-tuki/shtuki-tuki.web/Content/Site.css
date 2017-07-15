@@ -1,17 +1,86 @@
 ﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+    margin: 0;
+    padding: 0;
+
+    font-size: small;
 }
 
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+nav {
+    width: 100%;
+    background-color: #1c1c1c;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    nav {
+        height: 90px;
+    }
+
+    .nav-social {
+        background-color: #ffffff;
+        height: 210px;
+        padding-top: 30px;
+    }
+
+    .nav-logo {
+        margin-top: 60px;
+    }
+
+    .nav-link,
+    .nav-contacts {
+        padding-top: 30px;
+    }
+
+    .nav-link ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-link ul li {
+        display: inline-block;
+        margin: 0 20px 0 20px;
+        font-size: 1.2em;
+    }
+
+    .nav-link ul li a,
+    .nav-link ul li a:visited {
+        font-family: 'RalewayBold';
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    .nav-cart {
+        padding-top: 20px;
+    }
+
+    .nav-cart a,
+    .nav-cart a:active,
+    .nav-cart a:visited {
+        text-decoration: none;
+    }
+
+    .nav-cart a img {
+        margin-top: 10px;
+    }
+
+        .nav-cart span {
+            color: #ffffff;
+            font-size: 0.8em;
+            margin: -30px 0 0 -11px;
+            text-decoration: none;
+        }
 }
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+/* Small devices (tablets, 768px and up 992) */
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+/* Small devices (mobile, 320px and up 767) */
+@media (min-width: 320px) and (max-width: 767px) {
+}
+

@@ -131,7 +131,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Infrastructure\" />
+    <Folder Include="Content\images\upload\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
@@ -167,13 +167,20 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Controllers\WebPublicGoodsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\CartModelBinder.cs" />
+    <Compile Include="Infrastructure\CustomAuthorizeAttribute.cs" />
+    <Compile Include="Infrastructure\CustomPrincipal.cs" />
+    <Compile Include="Infrastructure\SessionPersister.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\ViewModelLogin.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
@@ -181,6 +188,48 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\images\site\good-active-about.png" />
+    <Content Include="Content\images\site\good-active-buy.png" />
+    <Content Include="Content\images\site\good-active-logo.png" />
+    <Content Include="Content\images\site\good-photo.jpg" />
+    <Content Include="Content\images\site\header-bg.jpg" />
+    <Content Include="Content\images\site\how-we-work-bg-1.jpg" />
+    <Content Include="Content\images\site\how-we-work-bg-2.jpg" />
+    <Content Include="Content\images\site\how-we-work-bg-3.jpg" />
+    <Content Include="Content\images\site\how-we-work-bg-4.jpg" />
+    <Content Include="Content\images\site\how-we-work-bg-5.jpg" />
+    <Content Include="Content\images\site\how-we-work-ico-1.png" />
+    <Content Include="Content\images\site\how-we-work-ico-2.png" />
+    <Content Include="Content\images\site\how-we-work-ico-3.png" />
+    <Content Include="Content\images\site\how-we-work-ico-4.png" />
+    <Content Include="Content\images\site\how-we-work-ico-5.png" />
+    <Content Include="Content\images\site\index-goods-pop-label.png" />
+    <Content Include="Content\images\site\index-offers-bg.png" />
+    <Content Include="Content\images\site\index-photo-designer-1.png" />
+    <Content Include="Content\images\site\index-photo-designer-2.png" />
+    <Content Include="Content\images\site\index-slider-arrow-left.png" />
+    <Content Include="Content\images\site\index-slider-arrow-right.png" />
+    <Content Include="Content\images\site\index-video-bg.png" />
+    <Content Include="Content\images\site\line-about-caption.jpg" />
+    <Content Include="Content\images\site\line-block-img.png" />
+    <Content Include="Content\images\site\nav-cart.png" />
+    <Content Include="Content\images\site\nav-logo.png" />
+    <Content Include="Content\images\site\nav-phone.png" />
+    <Content Include="Content\images\site\nav-social-instagram.png" />
+    <Content Include="Content\images\site\nav-social-ok.png" />
+    <Content Include="Content\images\site\nav-social-vk.png" />
+    <Content Include="Content\images\site\photo-slider-offers.jpg" />
+    <Content Include="Content\images\site\slider-offers-photo-1.jpg" />
+    <Content Include="Content\images\site\slider-offers-photo-2.jpg" />
+    <Content Include="Content\images\site\slider-offers-photo-3.jpg" />
+    <Content Include="Content\lib\font-awesome.css" />
+    <Content Include="Content\lib\font-awesome.min.css" />
+    <Content Include="Content\lib\fonts.css" />
+    <Content Include="Content\styles\publicIndex.css" />
+    <Content Include="Content\styles\styleGoodPrev.css" />
+    <Content Include="Content\styles\styleGoods.css" />
+    <Content Include="Content\styles\styleLogin.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -211,6 +260,21 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\fonts\FontAwesome.otf" />
+    <Content Include="Content\fonts\RalewayBold.eot" />
+    <Content Include="Content\fonts\RalewayBold.ttf" />
+    <Content Include="Content\fonts\RalewayBold.woff" />
+    <Content Include="Content\fonts\RalewayRegular.eot" />
+    <Content Include="Content\fonts\RalewayRegular.ttf" />
+    <Content Include="Content\fonts\RalewayRegular.woff" />
+    <Content Include="Content\fonts\SegoePrintBold.ttf" />
+    <Content Include="Content\fonts\SegoePrintRegular.eot" />
+    <Content Include="Content\fonts\SegoePrintRegular.ttf" />
+    <Content Include="Content\fonts\SegoePrintRegular.woff" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -238,6 +302,10 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_LayoutLogin.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\shtuki-tuki.domain\shtuki-tuki.domain.csproj">

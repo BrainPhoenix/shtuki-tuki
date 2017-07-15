@@ -9,24 +9,28 @@ namespace shtuki_tuki.web.Controllers
         private readonly GoodsRepository _repositoryGoods = GoodsRepository.Current;
 
         [HttpGet]
-        public IHttpActionResult GoodCollectionCategory(int category)
+        public IHttpActionResult GoodCollectionCategory(ushort category)
         {
             var typeCategory = SetCategory(category);
-            var listgoods = _repositoryGoods.GetGoods(typeCategory);
+            var listgoods = _repositoryGoods.GetGoodCollectionCategory(typeCategory);
 
             return Ok(listgoods);
         }
 
-        public IHttpActionResult Good(int id)
-        {
-            return Ok();
-        }
-
+        [HttpGet]
         public IHttpActionResult GoodCollectionPop()
         {
-            return Ok();
-        }        
+            var listgoods = _repositoryGoods.GetGoodCollectionPop();
+            return Ok(listgoods);
+        }
 
+        //[HttpGet]
+        //public IHttpActionResult Good(long id)
+        //{
+        //    return Ok();
+        //}               
+
+        [HttpGet]
         public IHttpActionResult GoodCollectionOrder()
         {
             return Ok();
@@ -37,7 +41,7 @@ namespace shtuki_tuki.web.Controllers
         /// </summary>
         /// <param name="category">Значение Id элемента перечисления TypeCategory</param>
         /// <returns></returns>
-        private TypeCategory SetCategory(int category)
+        private TypeCategory SetCategory(ushort category)
         {            
             TypeCategory result = new TypeCategory();
 

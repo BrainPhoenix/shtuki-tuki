@@ -81,6 +81,7 @@
     <Compile Include="Repository\GoodsRepository.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Business\" />
     <Folder Include="Extensions\" />
     <Folder Include="Services\" />
   </ItemGroup>

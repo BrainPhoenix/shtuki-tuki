@@ -13,6 +13,12 @@ namespace shtuki_tuki.web
             routes.AppendTrailingSlash = true;
 
             routes.MapRoute(
+                name: "Account",
+                url: "Account",
+                defaults: new { controller = "Account", action = "Login", id = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }

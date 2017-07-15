@@ -1,0 +1,79 @@
+﻿/*All devices*/
+
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .goods-container {
+        height: 380px;
+        margin-bottom: 25px;
+        padding: 0;
+        border: 1px solid #eae9e9;
+    }
+
+    .goods-container-image {
+        margin: 0;
+        padding: 0;
+        position: absolute;
+    }
+
+    .goods-container-image img {
+        max-width: 100%;
+        cursor: pointer;
+    }
+
+    .goods-container-image-mask {
+        opacity: 0;
+        width: 100%;
+        height: 280px;
+        position: relative;
+        background-color: #d4a87a;
+    }
+
+    .goods-container-image-mask .good-mask-logo {
+        margin-top: 60px;
+    }
+
+    .goods-container-image-mask .good-mask-about {
+        margin-top: 30px;
+        margin-bottom: 55px;
+    }
+
+    .goods-container-image-mask .good-mask-about a {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .goods-container-image-mask:hover {
+        opacity: 1;
+        transition: 1s;
+    }
+
+    .goods-container-price {
+        padding-top: 20px;
+    }
+
+    .goods-container-good-name {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.2em;
+        font-weight: 600;
+    }
+
+    .goods-container-good-price {
+        font-size: 1.6em;
+        font-family: 'RalewayBold';
+        margin-bottom: 20px;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+/* Small devices (tablets, 768px and up 992) */
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+/* Small devices (mobile, 320px and up 767) */
+@media (min-width: 320px) and (max-width: 767px) {
+}
+

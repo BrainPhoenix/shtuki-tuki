@@ -1,24 +1,457 @@
-﻿<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>ASP.NET Web API is a framework that makes it easy to build HTTP services that reach
-        a broad range of clients, including browsers and mobile devices. ASP.NET Web API
-        is an ideal platform for building RESTful applications on the .NET Framework.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301870">Learn more &raquo;</a></p>
+﻿@{
+    ViewBag.Title = "Дизайн интерьера кафе и ресторанов";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Styles
+{
+    <link href="~/Content/styles/publicIndex.css" rel="stylesheet" />
+    <link href="~/Content/styles/styleGoods.css" rel="stylesheet" />
+}
+
+@section Body
+{
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center header-caption">
+                    <h3 class="header-h3-top">ИНТЕРНЕТ-МАГАЗИН</h3>
+                    <h3 class="header-h3-middle">ДИЗАЙНЕРСКОЙ МЕБЕЛИ И ПРЕДМЕТОВ ИНТЕРЬЕРА</h3>
+                    <h3 class="header-h3-bottom"></h3>
+                    <p class="header-p">Создаем дизайн более 9 лет</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="line-bottom-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8 text-center line-content">
+                    <span class="line-content-span-left">Скидка -10%</span>
+                    <span class="line-content-span-right">на следующую покупку!</span>
+                    <p>Доставка по всей России и СНГ</p>
+                </div>
+                <div class="col-md-2"></div>
+                <div class="col-md-12 text-center line-img-block">
+                    <a href="#"><img src="~/Content/images/site/line-block-img.png" alt="line image" /></a>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301871">Learn more &raquo;</a></p>
+    <div class="index-special-offers">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="index-special-offers-caption-p text-center">Наш Hand Made</p>
+                </div>
+                <div class="col-md-12 index-slider-offers-body">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8 text-center index-special-offers-caption">
+                        <h3>
+                            ДИЗАЙНЕРСКИЙ СВЕТИЛЬНИК ИЗ НАТУРАЛЬНОГО ДЕРЕВА
+                            <span>РУЧНОЙ РАБОТЫ</span>
+                            ПО ЦЕНЕ ОБЫЧНОЙ ЛЮСТРЫ ВСЕГО ЗА
+                        </h3>
+                        <p>
+                            <span>6720</span> Руб. <span>или</span> <span>120</span> $
+                        </p>
+                    </div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-12 index-special-offers-slider">
+                        <div class="col-md-1 index-special-offers-slider-arrow-left">
+                            <div class="col-md-12">
+                                <img src="~/Content/images/site/index-slider-arrow-left.png" alt="slider arrow left" />
+                            </div>
+                        </div>
+                        <div class="col-md-10 index-special-offers-slider-gallery">
+                            <div class="col-md-12">
+                                <div class="col-md-4 text-right slider-left">
+                                    <img src="~/Content/images/site/slider-offers-photo-2.jpg" alt="slider-photo" />
+                                </div>
+                                <div class="col-md-4 text-center slider-center">
+                                    <img src="~/Content/images/site/photo-slider-offers.jpg" alt="slider-photo" />
+                                </div>
+                                <div class="col-md-4 text-left slider-right">
+                                    <img src="~/Content/images/site/slider-offers-photo-3.jpg" alt="slider-photo" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-1 index-special-offers-slider-arrow-right">
+                            <div class="col-md-12">
+                                <img src="~/Content/images/site/index-slider-arrow-right.png" alt="slider arrow right" />
+                            </div>
+                        </div>
+                        <div class="col-md-12 index-special-offers-slider-orderby text-center">
+                            <input type="button" value="Оформить заказ" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301872">Learn more &raquo;</a></p>
+    <div class="line-bottom-index-special-offers">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center line-bottom-index-offers-caption">
+                    <h3>Добавьте <span>наш сайт</span> в закладки, чтобы в следующий раз было легче нас найти! Для этого нажмите Ctrl + D</h3>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+    <div class="index-goods-pop">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-12 index-goods-pop-nav-label">
+                        <img src="~/Content/images/site/index-goods-pop-label.png" alt="pop goods label" />
+                    </div>
+                    <div class="col-md-12 text-center">
+                        <p class="index-special-offers-caption-p">Наше лучшее</p>
+                        <h3 class="index-pop-goods-caption">ПОПУЛЯРНЫЕ ТОВАРЫ</h3>
+                    </div>
+                </div>
+                <div class="col-md-12 index-goods-pop-nav">
+                    <div class="col-md-12 text-center index-goods-pop-nav-ul">
+                        <ul>
+                            <li>ВСЕ</li>
+                            <li>ДВЕРИ</li>
+                            <li>СВЕТИЛЬНИКИ</li>
+                            <li>ЛЕСТНИЦЫ</li>
+                            <li>МЕБЕЛЬ</li>
+                            <li>ЭКСПЕРИМЕНТЫ ДИЗАЙНЕРОВ</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-12 index-goods-pop-body">
+                    <div class="col-md-3">
+                        <div class="col-md-12 goods-container">
+                            <div class="col-md-12 goods-container-image">
+                                <img src="~/Content/images/site/good-photo.jpg">
+                            </div>
+                            <div class="col-md-12 goods-container-image-mask text-center">
+                                <p class="good-mask-logo">
+                                    <img src="~/Content/images/site/good-active-logo.png" />
+                                </p>
+                                <p class="good-mask-about">
+                                    <a href="#"><img src="~/Content/images/site/good-active-about.png" /></a>
+                                    <a href="#"><img src="~/Content/images/site/good-active-buy.png" /></a>
+                                </p>
+                            </div>
+                            <div class="col-md-12 goods-container-price">
+                                <p class="goods-container-good-name">Наименование светильника</p>
+                                <p class="goods-container-good-price"><span>58690</span> <span>руб.</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="col-md-12 goods-container">
+                            <div class="col-md-12 goods-container-image">
+                                <img src="~/Content/images/site/good-photo.jpg">
+                            </div>
+                            <div class="col-md-12 goods-container-image-mask text-center">
+                                <p class="good-mask-logo">
+                                    <img src="~/Content/images/site/good-active-logo.png" />
+                                </p>
+                                <p class="good-mask-about">
+                                    <a href="#"><img src="~/Content/images/site/good-active-about.png" /></a>
+                                    <a href="#"><img src="~/Content/images/site/good-active-buy.png" /></a>
+                                </p>
+                            </div>
+                            <div class="col-md-12 goods-container-price">
+                                <p class="goods-container-good-name">Наименование светильника</p>
+                                <p class="goods-container-good-price"><span>58690</span> <span>руб.</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="col-md-12 goods-container">
+                            <div class="col-md-12 goods-container-image">
+                                <img src="~/Content/images/site/good-photo.jpg">
+                            </div>
+                            <div class="col-md-12 goods-container-image-mask text-center">
+                                <p class="good-mask-logo">
+                                    <img src="~/Content/images/site/good-active-logo.png" />
+                                </p>
+                                <p class="good-mask-about">
+                                    <a href="#"><img src="~/Content/images/site/good-active-about.png" /></a>
+                                    <a href="#"><img src="~/Content/images/site/good-active-buy.png" /></a>
+                                </p>
+                            </div>
+                            <div class="col-md-12 goods-container-price">
+                                <p class="goods-container-good-name">Наименование светильника</p>
+                                <p class="goods-container-good-price"><span>58690</span> <span>руб.</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="col-md-12 goods-container">
+                            <div class="col-md-12 goods-container-image">
+                                <img src="~/Content/images/site/good-photo.jpg">
+                            </div>
+                            <div class="col-md-12 goods-container-image-mask text-center">
+                                <p class="good-mask-logo">
+                                    <img src="~/Content/images/site/good-active-logo.png" />
+                                </p>
+                                <p class="good-mask-about">
+                                    <a href="#"><img src="~/Content/images/site/good-active-about.png" /></a>
+                                    <a href="#"><img src="~/Content/images/site/good-active-buy.png" /></a>
+                                </p>
+                            </div>
+                            <div class="col-md-12 goods-container-price">
+                                <p class="goods-container-good-name">Наименование светильника</p>
+                                <p class="goods-container-good-price"><span>58690</span> <span>руб.</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="col-md-12 goods-container">
+                            <div class="col-md-12 goods-container-image">
+                                <img src="~/Content/images/site/good-photo.jpg">
+                            </div>
+                            <div class="col-md-12 goods-container-image-mask text-center">
+                                <p class="good-mask-logo">
+                                    <img src="~/Content/images/site/good-active-logo.png" />
+                                </p>
+                                <p class="good-mask-about">
+                                    <a href="#"><img src="~/Content/images/site/good-active-about.png" /></a>
+                                    <a href="#"><img src="~/Content/images/site/good-active-buy.png" /></a>
+                                </p>
+                            </div>
+                            <div class="col-md-12 goods-container-price">
+                                <p class="goods-container-good-name">Наименование светильника</p>
+                                <p class="goods-container-good-price"><span>58690</span> <span>руб.</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="col-md-12 goods-container">
+                            <div class="col-md-12 goods-container-image">
+                                <img src="~/Content/images/site/good-photo.jpg">
+                            </div>
+                            <div class="col-md-12 goods-container-image-mask text-center">
+                                <p class="good-mask-logo">
+                                    <img src="~/Content/images/site/good-active-logo.png" />
+                                </p>
+                                <p class="good-mask-about">
+                                    <a href="#"><img src="~/Content/images/site/good-active-about.png" /></a>
+                                    <a href="#"><img src="~/Content/images/site/good-active-buy.png" /></a>
+                                </p>
+                            </div>
+                            <div class="col-md-12 goods-container-price">
+                                <p class="goods-container-good-name">Наименование светильника</p>
+                                <p class="goods-container-good-price"><span>58690</span> <span>руб.</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="col-md-12 goods-container">
+                            <div class="col-md-12 goods-container-image">
+                                <img src="~/Content/images/site/good-photo.jpg">
+                            </div>
+                            <div class="col-md-12 goods-container-image-mask text-center">
+                                <p class="good-mask-logo">
+                                    <img src="~/Content/images/site/good-active-logo.png" />
+                                </p>
+                                <p class="good-mask-about">
+                                    <a href="#"><img src="~/Content/images/site/good-active-about.png" /></a>
+                                    <a href="#"><img src="~/Content/images/site/good-active-buy.png" /></a>
+                                </p>
+                            </div>
+                            <div class="col-md-12 goods-container-price">
+                                <p class="goods-container-good-name">Наименование светильника</p>
+                                <p class="goods-container-good-price"><span>58690</span> <span>руб.</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="col-md-12 goods-container">
+                            <div class="col-md-12 goods-container-image">
+                                <img src="~/Content/images/site/good-photo.jpg">
+                            </div>
+                            <div class="col-md-12 goods-container-image-mask text-center">
+                                <p class="good-mask-logo">
+                                    <img src="~/Content/images/site/good-active-logo.png" />
+                                </p>
+                                <p class="good-mask-about">
+                                    <a href="#"><img src="~/Content/images/site/good-active-about.png" /></a>
+                                    <a href="#"><img src="~/Content/images/site/good-active-buy.png" /></a>
+                                </p>
+                            </div>
+                            <div class="col-md-12 goods-container-price">
+                                <p class="goods-container-good-name">Наименование светильника</p>
+                                <p class="goods-container-good-price"><span>58690</span> <span>руб.</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="index-how-we-work">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center index-how-we-work-caption">
+                    <p class="index-special-offers-caption-p">Как приобрести</p>
+                    <h3 class="index-pop-goods-caption">КАК МЫ РАБОТАЕМ</h3>
+                </div>
+                <div class="col-md-12 index-how-we-work-content">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-2">
+                        <div class="col-md-12 text-center how-we-work-body we-work-1">
+                            <img src="~/Content/images/site/how-we-work-ico-1.png" />
+                            <div class="col-md-12 text-center">
+                                <p>ВЫ ВЫБИРАЕТЕ ИНТЕРЕСУЮЩИЕ ВАС ТОВАРЫ</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="col-md-12 text-center how-we-work-body we-work-2">
+                            <img src="~/Content/images/site/how-we-work-ico-2.png" />
+                            <div class="col-md-12 text-center">
+                                <p>НАШИ МЕНЕДЖЕРЫ СВЯЗЫВАЮТСЯ С ВАМИ</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="col-md-12 text-center how-we-work-body we-work-3">
+                            <img src="~/Content/images/site/how-we-work-ico-3.png" />
+                            <div class="col-md-12 text-center">
+                                <p>УТОЧНЯЕМ ПАРАМЕТРЫ ЗАКАЗА И ДОСТАВКУ</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="col-md-12 text-center how-we-work-body we-work-4">
+                            <img src="~/Content/images/site/how-we-work-ico-4.png" />
+                            <div class="col-md-12 text-center">
+                                <p>ВЫ ОПЛАЧИВАЕТЕ ЗАКАЗ</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="col-md-12 text-center how-we-work-body we-work-5">
+                            <img src="~/Content/images/site/how-we-work-ico-5.png" />
+                            <div class="col-md-12 text-center">
+                                <p>ОТПРАВКА ЗАКАЗА</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="index-about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center index-about-caption">
+                    <p class="index-special-offers-caption-p">Творческие люди</p>
+                    <h3 class="index-pop-goods-caption">О НАШЕЙ КОМАНДЕ</h3>
+                </div>
+                <div class="col-md-12 index-about-content">
+                    <div class="col-md-6">
+                        <div class="col-md-12 index-about-video">
+                            <iframe src="https://vk.com/video_ext.php?oid=52019604&id=456239050&hash=3349e42969c82de7"
+                                    frameborder="0"
+                                    allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <div class="col-md-6">
+                            <img src="~/Content/images/site/index-photo-designer-1.png" alt="photo designer" />
+                            <p class="index-about-name">Павел Васильев</p>
+                            <p class="index-about-prof">Художник-оформитель</p>
+                        </div>
+                        <div class="col-md-6">
+                            <img src="~/Content/images/site/index-photo-designer-2.png" alt="photo designer" />
+                            <p class="index-about-name">Алёна Моисеева</p>
+                            <p class="index-about-prof">Дизайнер, Арт-директор</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="col-md-4 text-right line-about">
+                        <img src="~/Content/images/site/line-about-caption.jpg" alt="line caption" />
+                    </div>
+                    <div class="col-md-4 text-center line-caption-about">
+                        <h3>Творческий процесс</h3>
+                    </div>
+                    <div class="col-md-4 text-left line-about">
+                        <img src="~/Content/images/site/line-about-caption.jpg" alt="line caption" />
+                    </div>
+                    <div class="col-md-12">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8 text-center line-text-about">
+                            <p>
+                                Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.
+                                Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации
+                                "Здесь ваш текст..Здесь ваш текст.. Здесь ваш текст.."
+                            </p>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="line-bottom-index-about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center line-bottom-index-about-caption">
+                    <h3>Приглашаем к <span>сотрудничеству</span> дизайнеров!</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="index-reviews">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center index-reviews-caption">
+                    <p class="index-special-offers-caption-p">О нас говорят</p>
+                    <h3 class="index-pop-goods-caption">ОТЗЫВЫ НАШИХ ПОКУПАТЕЛЕЙ</h3>
+                </div>
+                <div class="col-md-12">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="index-contacts">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="index-feedback">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".goods-container-image-mask").hover(
+            function () {
+                // навели курсор на объект
+
+
+            }, function () {
+                // отвели курсор с объекта
+
+            });
+        });
+    </script>
+}
+
+

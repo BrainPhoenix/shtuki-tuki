@@ -1,0 +1,43 @@
+﻿@model shtuki_tuki.web.ViewModels.ViewModelLogin
+
+@{
+    ViewBag.Title = "Вход в панель управления";
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-4 col-sm-4 col-xs-12"></div>
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { @class = "col-md-12 form-login" }))
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="col-md-12 text-center form-login-header">
+                        <p>Вход в панель управления сайтом</p>
+                    </div>
+                    <div class="col-md-12 text-center form-login-content">
+                        <div class="input-group">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                            @Html.TextBoxFor(m => m.Username, new { @class = "form-control", @placeholder = "Логин", @required = "" })
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-link"></span></span>
+                            @Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Пароль", @required = "" })
+                        </div>
+                        <input type="submit" value="ВОЙТИ">
+                    </div>
+                    <div class="col-md-12 text-center form-login-message">
+                        @if (!string.IsNullOrEmpty(ViewBag.LoginMessage))
+                        {
+                            <p>@ViewBag.LoginMessage</p>
+                        }
+                    </div>
+                }
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-12"></div>
+        </div>
+    </div>
+</div>
+
