@@ -133,6 +133,8 @@
     <Folder Include="App_Data\" />
     <Folder Include="Content\images\upload\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Catalog\" />
+    <Folder Include="Views\Contacts\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -169,6 +171,8 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\CatalogController.cs" />
+    <Compile Include="Controllers\ContactsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Controllers\WebPublicGoodsController.cs" />
@@ -189,6 +193,21 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\images\site\contacts-cup-ico.png" />
+    <Content Include="Content\images\site\contacts-cup-instagram.png" />
+    <Content Include="Content\images\site\contacts-cup-ok.png" />
+    <Content Include="Content\images\site\contacts-cup-vk.png" />
+    <Content Include="Content\images\site\contacts-mail-ico.png" />
+    <Content Include="Content\images\site\contacts-phone-ico.png" />
+    <Content Include="Content\images\site\contacts-phone-viber.png" />
+    <Content Include="Content\images\site\contacts-phone-watts.png" />
+    <Content Include="Content\images\site\footer-logo.png" />
+    <Content Include="Content\images\site\footer-mail.png" />
+    <Content Include="Content\images\site\footer-social-instagram.png" />
+    <Content Include="Content\images\site\footer-social-ok.png" />
+    <Content Include="Content\images\site\footer-social-vk.png" />
+    <Content Include="Content\images\site\footer-viber.png" />
+    <Content Include="Content\images\site\footer-watts.png" />
     <Content Include="Content\images\site\good-active-about.png" />
     <Content Include="Content\images\site\good-active-buy.png" />
     <Content Include="Content\images\site\good-active-logo.png" />
@@ -220,13 +239,18 @@
     <Content Include="Content\images\site\nav-social-ok.png" />
     <Content Include="Content\images\site\nav-social-vk.png" />
     <Content Include="Content\images\site\photo-slider-offers.jpg" />
+    <Content Include="Content\images\site\review-arrow-left.png" />
+    <Content Include="Content\images\site\review-arrow-right.png" />
+    <Content Include="Content\images\site\review-photo-1.png" />
+    <Content Include="Content\images\site\review-photo-2.png" />
+    <Content Include="Content\images\site\review-text-quotes.png" />
     <Content Include="Content\images\site\slider-offers-photo-1.jpg" />
     <Content Include="Content\images\site\slider-offers-photo-2.jpg" />
     <Content Include="Content\images\site\slider-offers-photo-3.jpg" />
     <Content Include="Content\lib\font-awesome.css" />
     <Content Include="Content\lib\font-awesome.min.css" />
     <Content Include="Content\lib\fonts.css" />
-    <Content Include="Content\styles\publicIndex.css" />
+    <Content Include="Content\styles\styleHomeIndex.css" />
     <Content Include="Content\styles\styleGoodPrev.css" />
     <Content Include="Content\styles\styleGoods.css" />
     <Content Include="Content\styles\styleLogin.css" />

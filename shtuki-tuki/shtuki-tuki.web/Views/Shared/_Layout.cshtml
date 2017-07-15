@@ -41,7 +41,7 @@
                     </ul>
                 </div>
                 <div class="col-md-1 nav-contacts text-right">
-                    <a href="@Url.Action("Contacts", "Home")"><img src="~/Content/images/site/nav-phone.png" alt="link to contacts page" /></a>
+                    <a href="@Url.Action("Index", "Contacts")"><img src="~/Content/images/site/nav-phone.png" alt="link to contacts page" /></a>
                 </div>
                 <div class="col-md-1 nav-cart text-right">
                     <a href="#"><img src="~/Content/images/site/nav-cart.png" alt="link to cart page" /></a><span>9</span>
@@ -50,7 +50,52 @@
         </div>
     </nav>
     @RenderSection("Body")
-    <footer></footer>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 footer-logo">
+                    <div class="col-md-12 footer-content">
+                        <img src="~/Content/images/site/footer-logo.png" alt="footer logo" />
+                        <p class="footer-logo-text">
+                            Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.
+                            Lorem Ipsum используют потому
+                        </p>
+                        <p class="footer-logo-copy-top">&copy;Copyright 2017</p>
+                        <p class="footer-logo-copy-bottom">Все права защищены</p>
+                    </div>
+                </div>
+                <div class="col-md-3 footer-category">
+                    <div class="col-md-12 footer-content">
+                        <h3>ТОВАРЫ</h3>
+                        <ul>
+                            <li><a href="#">Двери</a></li>
+                            <li><a href="#">Светильники</a></li>
+                            <li><a href="#">Лестницы</a></li>
+                            <li><a href="#">Мебель</a></li>
+                            <li><a href="#">Эксперименты дизайнеров</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 footer-contacts">
+                    <div class="col-md-12 footer-content">
+                        <h3>КОНТАКТЫ</h3>
+                        <img src="~/Content/images/site/footer-watts.png" alt="footer watsapp icon" />
+                        <img src="~/Content/images/site/footer-viber.png" alt="footer viber icon" />
+                        <p>+7 (928) 342-47-53</p>
+                        <p><img src="~/Content/images/site/footer-mail.png" /><span>shtuki-tuki@yandex.ru</span></p>
+                    </div>
+                </div>
+                <div class="col-md-3 footer-social">
+                    <div class="col-md-12 footer-content">
+                        <h3>МЫ В СОЦ СЕТЯХ</h3>
+                        <a href="#"><img src="~/Content/images/site/footer-social-instagram.png" alt="footer instagram icon" /></a>
+                        <a href="#"><img src="~/Content/images/site/footer-social-ok.png" alt="footer odnoklassniki icon" /></a>
+                        <a href="#"><img src="~/Content/images/site/footer-social-vk.png" alt="footer vkontakte icon" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("Scripts", required: false)

@@ -5,7 +5,8 @@
     font-size: small;
 }
 
-nav {
+nav,
+footer {
     width: 100%;
     background-color: #1c1c1c;
 }
@@ -70,6 +71,85 @@ nav {
             margin: -30px 0 0 -11px;
             text-decoration: none;
         }
+
+    .footer-content{
+        margin: 0;
+        padding: 0;
+    }
+
+    .footer-logo div img{
+        margin-top: 30px;
+    }
+
+    .footer-logo div .footer-logo-text{
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.2em;
+        color: #7c7c7c;
+        margin: 20px 0 20px 0;
+    }
+
+    .footer-logo div .footer-logo-copy-top,
+    .footer-logo div .footer-logo-copy-bottom{
+        font-family: 'RalewayRegular';
+        font-size: 1.2em;
+        color: #444343;
+        margin: 0;
+    }
+
+    .footer-content h3{
+        margin: 50px 0 30px 0;
+        font-family: 'RalewayBold';
+        font-size: 1.5em;
+        color: #ffffff;
+    }
+
+    .footer-category{
+        background-color: #d4a87a;
+        padding-left: 20px;
+    }
+
+    .footer-category div ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .footer-category div ul li{
+        margin: 15px 0 15px 0;
+        font-size: 1.2em;
+    }
+
+    .footer-category div ul li a,
+    .footer-category div ul li a:hover,
+    .footer-category div ul li a:visited{
+        font-family: 'Open Sans', sans-serif;
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    .footer-contacts{
+        padding-left: 20px;
+    }
+
+    .footer-contacts img{
+        max-width: 40px;
+        margin-right: 10px;
+    }
+
+    .footer-contacts p{
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.4em;
+        color: #ffffff;
+        margin: 20px 0 10px 0;
+    }
+
+    .footer-social{
+        padding-left: 20px;
+    }
+
+    .footer-social div a img{
+        margin-right: 10px;
+    }
 }
 
 /* Medium devices (desktops, 992px and up) */

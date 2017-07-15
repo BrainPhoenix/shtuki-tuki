@@ -325,7 +325,7 @@ header {
     }
 
     .index-about-caption {
-        margin-top: 50px;
+        margin-top: 70px;
         margin-bottom: 70px;
     }
 
@@ -396,13 +396,139 @@ header {
     .index-reviews {
         width: 100%;
         background-color: #eeeeee;
+        padding-bottom: 150px;
     }
 
     .index-reviews-caption {
-        margin-top: 50px;
+        margin-top: 70px;
         margin-bottom: 70px;
     }
+
+    .review-arrow img{
+        margin-top: 150px;
+        max-width: 90%;
+        cursor: pointer;
+    }
+
+    .review-name{
+        font-family: 'RalewayBold';
+        font-size: 1.4em;
+        color: #333333;
+        margin: 0;
+    }
+
+    .review-city{
+        font-family: 'RalewayRegular';
+        font-size: 1.2em;
+        color: #d4a87a;
+        margin: 10px 0 10px 0;
+    }
+
+    .review-block-text{
+        background-color: #ffffff;
+        height: 300px;
+    }
+
+    .review-image-quotes img{
+        margin-top: 20px;
+    }
+
+    .review-image-photo img{
+        margin-top: -100px;
+    }
+
+    .review-text p{
+        margin-top: 20px;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.3em;
+        color: #757575;
+    }
     /*Section index reviews end*/
+
+    /*Section index contacts start*/
+    .index-contacts{
+        width: 100%;
+    }
+
+    .index-contacts-caption{
+        margin-top: 70px;
+        margin-bottom: 40px;
+    }
+
+    .contacts-block{
+        margin-bottom: 100px;
+    }
+
+    .contacts-content p{
+        font-family: 'RalewayBold';
+        font-size: 1em;
+        color: #333333;
+        margin: 10px 0 20px 0;
+    }
+
+    .contacts-content span{
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.1em;
+        color: #333333;
+    }
+
+    .index-feedback-caption h3{
+        margin: 0 0 10px 0;
+        font-size: 2.2em;
+    }
+
+    .index-feedback-caption p{
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.3em;
+        color: #959595;
+        margin-bottom: 30px;
+    }  
+    
+    .form-feedback div{
+        margin: 0;
+    }  
+
+    .form-feedback div p{
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1em;
+        color: #959595;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+    .form-feedback div input{
+        border: 1px solid #dddddd;
+        border-radius: 0;
+        font-size: 1.3em;
+        width: 100%;
+        padding: 5px 0 5px 10px;
+        margin: 0;
+    }    
+
+    .form-feedback div textarea{
+        border: 1px solid #dddddd;
+        border-radius: 0;
+        font-size: 1.3em;
+        width: 100%;
+        padding: 5px 0 5px 10px;
+        margin: 0;
+    }
+
+    .form-feedback div input[type="submit"]{
+        border: 1px solid #d4a87a;
+        padding: 15px;
+        font-family: 'RalewayBold';
+        font-size: 1.3em;
+        color: #333333;
+        width: 100%;
+        background-color: #ffffff;
+        margin: 20px 0 100px 0;
+    }
+
+    .form-feedback div input[type="submit"]:hover{
+        background-color: #d4a87a;
+    }
+    /*Section index contacts end*/
 }
 
 /* Medium devices (desktops, 992px and up) */

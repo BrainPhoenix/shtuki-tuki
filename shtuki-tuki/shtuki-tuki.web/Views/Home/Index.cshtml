@@ -5,7 +5,7 @@
 
 @section Styles
 {
-    <link href="~/Content/styles/publicIndex.css" rel="stylesheet" />
+    <link href="~/Content/styles/styleHomeIndex.css" rel="stylesheet" />
     <link href="~/Content/styles/styleGoods.css" rel="stylesheet" />
 }
 
@@ -34,12 +34,12 @@
                 </div>
                 <div class="col-md-2"></div>
                 <div class="col-md-12 text-center line-img-block">
-                    <a href="#"><img src="~/Content/images/site/line-block-img.png" alt="line image" /></a>
+                    <a href="#special-offers"><img src="~/Content/images/site/line-block-img.png" alt="line image" /></a>
                 </div>
             </div>
         </div>
     </div>
-    <div class="index-special-offers">
+    <div class="index-special-offers" id="special-offers">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -412,7 +412,62 @@
                     <h3 class="index-pop-goods-caption">ОТЗЫВЫ НАШИХ ПОКУПАТЕЛЕЙ</h3>
                 </div>
                 <div class="col-md-12">
-
+                    <div class="col-md-1 review-arrow">
+                        <img src="~/Content/images/site/review-arrow-left.png" alt="image review arrow left" />
+                    </div>
+                    <div class="col-md-10">
+                        <div class="col-md-6">
+                            <div class="col-md-12">
+                                <div class="col-md-6 review-name-caption-block">
+                                    <p class="review-name">АЛЕКСАНДР</p>
+                                    <p class="review-city">Санкт-Петербург</p>
+                                </div>
+                                <div class="col-md-12 review-block-text">
+                                    <div class="col-md-6 text-left review-image-quotes">
+                                        <img src="~/Content/images/site/review-text-quotes.png" />
+                                    </div>
+                                    <div class="col-md-6 text-center review-image-photo">
+                                        <img src="~/Content/images/site/review-photo-1.png" />
+                                    </div>
+                                    <div class="col-md-12 review-text">
+                                        <p>
+                                            Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.
+                                            Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона,
+                                            а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации
+                                            "Здесь ваш текст..
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="col-md-12">
+                                <div class="col-md-6 review-name-caption-block">
+                                    <p class="review-name">СВЕТЛАНА</p>
+                                    <p class="review-city">Санкт-Петербург</p>
+                                </div>
+                                <div class="col-md-12 review-block-text">
+                                    <div class="col-md-6 text-left review-image-quotes">
+                                        <img src="~/Content/images/site/review-text-quotes.png" />
+                                    </div>
+                                    <div class="col-md-6 text-center review-image-photo">
+                                        <img src="~/Content/images/site/review-photo-2.png" />
+                                    </div>
+                                    <div class="col-md-12 review-text">
+                                        <p>
+                                            Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.
+                                            Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона,
+                                            а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации
+                                            "Здесь ваш текст..
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-1 review-arrow">
+                        <img src="~/Content/images/site/review-arrow-right.png" alt="image review arrow right" />
+                    </div>
                 </div>
             </div>
         </div>
@@ -420,17 +475,72 @@
     <div class="index-contacts">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
-
+                <div class="col-md-12 text-center line-img-block">
+                    <a href="#contacts"><img src="~/Content/images/site/line-block-img.png" alt="line image" /></a>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="index-feedback">
-        <div class="container">
-            <div class="row">
+                <div class="col-md-12 text-center index-contacts-caption" id="contacts">
+                    <p class="index-special-offers-caption-p">Мы на связи</p>
+                    <h3 class="index-pop-goods-caption">НАШИ КОНТАКТЫ</h3>
+                </div>
+                <div class="col-md-12 contacts-block">
+                    <div class="col-md-4">
+                        <div class="col-md-12 text-center contacts-content">
+                            <img src="~/Content/images/site/contacts-phone-ico.png" alt="contacts phone icon" class="contacts-main-ico"/>
+                            <p>ТЕЛЕФОН</p>
+                            <img src="~/Content/images/site/contacts-phone-watts.png" alt="contacts watsapp icon" class="contacts-add-ico"/>
+                            <img src="~/Content/images/site/contacts-phone-viber.png" alt="contacts viber icon" class="contacts-add-ico" />
+                            <span>+7 (928) 342-47-53</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="col-md-12 text-center contacts-content">
+                            <img src="~/Content/images/site/contacts-mail-ico.png" alt="contacts mail icon" />
+                            <p>ПОЧТА</p>                            
+                            <span>shtuki-tuki@yandex.ru</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="col-md-12 text-center contacts-content">
+                            <img src="~/Content/images/site/contacts-cup-ico.png" alt="contacts cup icon" class="contacts-main-ico" />
+                            <p>МЫ В СОЦ СЕТЯХ</p>
+                            <a href="#" target="_blank"><img src="~/Content/images/site/contacts-cup-instagram.png" alt="contacts instagram icon" class="contacts-add-ico" /></a>
+                            <a href="#" target="_blank"><img src="~/Content/images/site/contacts-cup-ok.png" alt="contacts odnoklassniki icon" class="contacts-add-ico" /></a>
+                            <a href="#" target="_blank"><img src="~/Content/images/site/contacts-cup-vk.png" alt="contacts vkontakte icon" class="contacts-add-ico" /></a>
+                        </div>
+                    </div>
+                </div>
                 <div class="col-md-12">
-
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+                        <div class="col-md-12 text-center index-feedback-caption">
+                            <h3 class="index-pop-goods-caption">У ВАС ЕСТЬ ВОСПРОС?</h3>
+                            <p>Оставьте свое сообщение и мы с вами свяжемся</p>
+                        </div>
+                        <div class="col-md-12">
+                            <form class="col-md-12 form-feedback">
+                                <div class="col-md-6">
+                                    <p>Ваше имя</p>
+                                    <input type="text" class="form-feedback-name" />
+                                    <p>Ваш телефон</p>
+                                    <input type="text" class="form-feedback-phone" />
+                                </div>
+                                <div class="col-md-6">
+                                    <p>Ваша фамилия</p>
+                                    <input type="text" class="form-feedback-sername" />
+                                    <p>Ваш e-mail</p>
+                                    <input type="email" class="form-feedback-email" />
+                                </div>
+                                <div class="col-md-12">
+                                    <p>Ваше сообщение</p>
+                                    <textarea class="form-feedback-message"></textarea>
+                                </div>     
+                                <div class="col-md-12">
+                                    <input type="submit" value="Отправить сообщение" class="form-feedback-submit" />
+                                </div>                          
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-3"></div>
                 </div>
             </div>
         </div>
