@@ -134,7 +134,6 @@
     <Folder Include="Content\images\upload\" />
     <Folder Include="Models\" />
     <Folder Include="Views\Catalog\" />
-    <Folder Include="Views\Contacts\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -201,6 +200,9 @@
     <Content Include="Content\images\site\contacts-phone-ico.png" />
     <Content Include="Content\images\site\contacts-phone-viber.png" />
     <Content Include="Content\images\site\contacts-phone-watts.png" />
+    <Content Include="Content\images\site\footer-icon-socia-instagraml.png" />
+    <Content Include="Content\images\site\footer-icon-socia-okl.png" />
+    <Content Include="Content\images\site\footer-icon-socia-vk.png" />
     <Content Include="Content\images\site\footer-logo.png" />
     <Content Include="Content\images\site\footer-mail.png" />
     <Content Include="Content\images\site\footer-social-instagram.png" />
@@ -250,6 +252,7 @@
     <Content Include="Content\lib\font-awesome.css" />
     <Content Include="Content\lib\font-awesome.min.css" />
     <Content Include="Content\lib\fonts.css" />
+    <Content Include="Content\styles\styleContactsIndex.css" />
     <Content Include="Content\styles\styleHomeIndex.css" />
     <Content Include="Content\styles\styleGoodPrev.css" />
     <Content Include="Content\styles\styleGoods.css" />
@@ -330,6 +333,7 @@
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Contacts\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\shtuki-tuki.domain\shtuki-tuki.domain.csproj">

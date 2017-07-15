@@ -1,0 +1,110 @@
+﻿/*All devices*/
+
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .contacts-page-caption{
+      margin-top: 110px;
+      margin-bottom: 70px;
+  }
+
+  .contacts-page-caption h3{
+      font-family: 'RalewayBold';
+      font-size: 2.3em;
+  }
+
+  .contacts-content-text{
+      margin: 20px 0 10px 0;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1.4em;
+      color: #757575;
+  }
+
+  .contacts-content-text-p{
+      margin: 10px 0 10px 0;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1.2em;
+      color: #757575;
+  }
+
+  .contacts-content-contacts{
+      font-family: 'RalewayBold';
+      font-size: 1.4em;
+      margin: 30px 0 20px 0;
+  }
+
+  .contacts-content-viber,
+  .contacts-content-email,
+  .contacts-content-social{
+      font-family: 'RalewayBold';
+      font-size: 1.2em;
+      color: #757575;
+  }
+
+  .contacts-content-viber span,
+  .contacts-content-email span,
+  .contacts-content-social span{
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1.3em;
+      color: #333333;
+      margin-left: 10px;
+  }
+
+  .form-feedback div{
+        margin: 0;
+    }  
+
+    .form-feedback div p{
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1em;
+        color: #959595;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+    .form-feedback div input{
+        border: 1px solid #dddddd;
+        border-radius: 0;
+        font-size: 1.3em;
+        width: 100%;
+        padding: 5px 0 5px 10px;
+        margin: 0;
+    }    
+
+    .form-feedback div textarea{
+        border: 1px solid #dddddd;
+        border-radius: 0;
+        font-size: 1.3em;
+        width: 100%;
+        height: 70px;
+        padding: 5px 0 5px 10px;
+        margin: 0;
+    }
+
+    .form-feedback div input[type="submit"]{
+        border: 1px solid #d4a87a;
+        padding: 15px;
+        font-family: 'RalewayBold';
+        font-size: 1.3em;
+        color: #333333;
+        width: 100%;
+        background-color: #ffffff;
+        margin: 20px 0 100px 0;
+    }
+
+    .form-feedback div input[type="submit"]:hover{
+        background-color: #d4a87a;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+/* Small devices (tablets, 768px and up 992) */
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+/* Small devices (mobile, 320px and up 767) */
+@media (min-width: 320px) and (max-width: 767px) {
+}

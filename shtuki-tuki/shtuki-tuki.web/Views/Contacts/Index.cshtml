@@ -1,0 +1,89 @@
+﻿@{
+    ViewBag.Title = "Наши контакты - Дизайн интерьера кафе и ресторанов";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Styles
+{
+    <link href="~/Content/styles/styleContactsIndex.css" rel="stylesheet" />
+}
+
+@section Body{
+    <div class="contact-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center contacts-page-caption">
+                    <h3>КОНТАКТЫ И ДОСТАВКА</h3>
+                </div>
+                <div class="col-md-12 contacts-content">
+                    <div class="col-md-6">
+                        <div class="col-md-12">
+                            <p class="contacts-content-text">
+                                Доставка по городам России осуществляется нашей партнерской курьерской компанией
+                                <a href="http://mkp-trans.ru/" target="_blank">«МКП-ТРАНС»</a>.
+                                Стоимость и Сроки доставки зависят от удаленности вашего города.
+                            </p>
+                            <p class="contacts-content-text-p">
+                                Свяжитесь с нами и узнайте подробности доставки в ваш город
+                            </p>
+                            <p class="contacts-content-contacts">КОНТАКТЫ:</p>
+                            <p class="contacts-content-viber">Viber/WhatsApp: <span>8(928) 342-47-53</span></p>
+                            <p class="contacts-content-email">E-mail: <span>shtuki-tuki@yandex.ru</span></p>
+                            <p class="contacts-content-social">
+                                Мы в соцсетях:
+                                <span>
+                                    <a href="https://www.instagram.com/design_shtuki" target="_blank"><img src="~/Content/images/site/footer-icon-socia-instagraml.png" alt="ico" /></a>
+                                    <a href="https://vk.com/club129227002" target="_blank"><img src="~/Content/images/site/footer-icon-socia-vk.png" alt="ico" /></a>
+                                    <a href="https://ok.ru/profile/563866844247" target="_blank"><img src="~/Content/images/site/footer-icon-socia-okl.png" alt="ico" /></a>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="col-md-12">
+                            <form class="col-md-12 form-feedback">
+                                <div class="col-md-6">
+                                    <p>Ваше имя</p>
+                                    <input type="text" class="form-feedback-name" />
+                                    <p>Ваш телефон</p>
+                                    <input type="text" class="form-feedback-phone" />
+                                </div>
+                                <div class="col-md-6">
+                                    <p>Ваша фамилия</p>
+                                    <input type="text" class="form-feedback-sername" />
+                                    <p>Ваш e-mail</p>
+                                    <input type="email" class="form-feedback-email" />
+                                </div>
+                                <div class="col-md-12">
+                                    <p>Ваше сообщение</p>
+                                    <textarea class="form-feedback-message"></textarea>
+                                </div>
+                                <div class="col-md-12">
+                                    <input type="submit" value="Отправить сообщение" class="form-feedback-submit" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".goods-container-image-mask").hover(
+            function () {
+                // навели курсор на объект
+
+
+            }, function () {
+                // отвели курсор с объекта
+
+            });
+        });
+    </script>
+}
+
