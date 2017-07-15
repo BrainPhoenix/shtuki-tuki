@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web.Http;
+﻿using System.Web.Http;
 
 namespace shtuki_tuki.web
 {
@@ -19,6 +16,9 @@ namespace shtuki_tuki.web
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            // Отключаем возможность вывода данных в формате xml
+            config.Formatters.Remove(config.Formatters.XmlFormatter);
         }
     }
 }

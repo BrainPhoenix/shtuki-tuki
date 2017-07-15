@@ -6,7 +6,6 @@
         Stairs,
         Furniture,
         Fixtures,
-        DesignExp,
-        Specials
+        DesignExp
     }
 }

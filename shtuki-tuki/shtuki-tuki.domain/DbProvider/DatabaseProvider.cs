@@ -1,6 +1,4 @@
-﻿using System.Data.SqlClient;
-
-namespace shtuki_tuki.domain.DbProvider
+﻿namespace shtuki_tuki.domain.DbProvider
 {
     public class DatabaseProvider
     {
@@ -13,29 +11,6 @@ namespace shtuki_tuki.domain.DbProvider
         public string ConnectionString()
         {
             return Connection;
-        }
-
-        /// <summary>
-        /// Метод обеспечивающий открытие соединения с базой данных
-        /// </summary>
-        /// <param name="connect"></param>
-        public void OpenConnection(SqlConnection connect)
-        {
-            if (connect != null)
-            {
-                connect.Open();
-            }
-        }
-
-        /// <summary>
-        /// Метод обеспечивающий закрытие соединения с базой данных
-        /// </summary>
-        public void CloseConnection(SqlConnection connect)
-        {
-            if (connect != null)
-            {
-                connect.Close();
-            }
         }
     }
 }
