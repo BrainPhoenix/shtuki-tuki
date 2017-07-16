@@ -17,7 +17,7 @@
                 <div class="col-md-12 text-center header-caption">
                     <h3 class="header-h3-top">ИНТЕРНЕТ-МАГАЗИН</h3>
                     <h3 class="header-h3-middle">ДИЗАЙНЕРСКОЙ МЕБЕЛИ И ПРЕДМЕТОВ ИНТЕРЬЕРА</h3>
-                    <h3 class="header-h3-bottom"></h3>
+                    <h3 class="header-h3-bottom">Штуки</h3>
                     <p class="header-p">Создаем дизайн более 9 лет</p>
                 </div>
             </div>
@@ -482,30 +482,30 @@
                     <p class="index-special-offers-caption-p">Мы на связи</p>
                     <h3 class="index-pop-goods-caption">НАШИ КОНТАКТЫ</h3>
                 </div>
-                <div class="col-md-12 contacts-block">
+                <div class="col-md-12 contacts-block vue-social-index">
                     <div class="col-md-4">
                         <div class="col-md-12 text-center contacts-content">
                             <img src="~/Content/images/site/contacts-phone-ico.png" alt="contacts phone icon" class="contacts-main-ico"/>
                             <p>ТЕЛЕФОН</p>
                             <img src="~/Content/images/site/contacts-phone-watts.png" alt="contacts watsapp icon" class="contacts-add-ico"/>
                             <img src="~/Content/images/site/contacts-phone-viber.png" alt="contacts viber icon" class="contacts-add-ico" />
-                            <span>+7 (928) 342-47-53</span>
+                            <span>{{phoneIndex}}</span>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="col-md-12 text-center contacts-content">
                             <img src="~/Content/images/site/contacts-mail-ico.png" alt="contacts mail icon" />
                             <p>ПОЧТА</p>                            
-                            <span>shtuki-tuki@yandex.ru</span>
+                            <span>{{mailIndex}}</span>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="col-md-12 text-center contacts-content">
                             <img src="~/Content/images/site/contacts-cup-ico.png" alt="contacts cup icon" class="contacts-main-ico" />
                             <p>МЫ В СОЦ СЕТЯХ</p>
-                            <a href="#" target="_blank"><img src="~/Content/images/site/contacts-cup-instagram.png" alt="contacts instagram icon" class="contacts-add-ico" /></a>
-                            <a href="#" target="_blank"><img src="~/Content/images/site/contacts-cup-ok.png" alt="contacts odnoklassniki icon" class="contacts-add-ico" /></a>
-                            <a href="#" target="_blank"><img src="~/Content/images/site/contacts-cup-vk.png" alt="contacts vkontakte icon" class="contacts-add-ico" /></a>
+                            <a v-bind:href="linkInstIndex" target="_blank"><img src="~/Content/images/site/contacts-cup-instagram.png" alt="contacts instagram icon" class="contacts-add-ico" /></a>
+                            <a v-bind:href="linkOkIndex" target="_blank"><img src="~/Content/images/site/contacts-cup-ok.png" alt="contacts odnoklassniki icon" class="contacts-add-ico" /></a>
+                            <a v-bind:href="linkVkIndex" target="_blank"><img src="~/Content/images/site/contacts-cup-vk.png" alt="contacts vkontakte icon" class="contacts-add-ico" /></a>
                         </div>
                     </div>
                 </div>
@@ -549,19 +549,7 @@
 
 @section Scripts
 {
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $(".goods-container-image-mask").hover(
-            function () {
-                // навели курсор на объект
 
-
-            }, function () {
-                // отвели курсор с объекта
-
-            });
-        });
-    </script>
 }
 
 

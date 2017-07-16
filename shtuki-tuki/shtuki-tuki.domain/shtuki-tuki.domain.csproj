@@ -78,7 +78,9 @@
     <Compile Include="Enumerables\TypePhoto.cs" />
     <Compile Include="Enumerables\TypeStrings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\ContactsRepository.cs" />
     <Compile Include="Repository\GoodsRepository.cs" />
+    <Compile Include="Repository\SocialNetworksRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Business\" />

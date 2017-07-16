@@ -17,7 +17,7 @@
                 </div>
                 <div class="col-md-12 contacts-content">
                     <div class="col-md-6">
-                        <div class="col-md-12">
+                        <div class="col-md-12 vue-social-contacts">
                             <p class="contacts-content-text">
                                 Доставка по городам России осуществляется нашей партнерской курьерской компанией
                                 <a href="http://mkp-trans.ru/" target="_blank">«МКП-ТРАНС»</a>.
@@ -27,14 +27,14 @@
                                 Свяжитесь с нами и узнайте подробности доставки в ваш город
                             </p>
                             <p class="contacts-content-contacts">КОНТАКТЫ:</p>
-                            <p class="contacts-content-viber">Viber/WhatsApp: <span>8(928) 342-47-53</span></p>
-                            <p class="contacts-content-email">E-mail: <span>shtuki-tuki@yandex.ru</span></p>
+                            <p class="contacts-content-viber">Viber/WhatsApp: <span>{{phoneContacts}}</span></p>
+                            <p class="contacts-content-email">E-mail: <span>{{mailContacts}}</span></p>
                             <p class="contacts-content-social">
                                 Мы в соцсетях:
                                 <span>
-                                    <a href="https://www.instagram.com/design_shtuki" target="_blank"><img src="~/Content/images/site/footer-icon-socia-instagraml.png" alt="ico" /></a>
-                                    <a href="https://vk.com/club129227002" target="_blank"><img src="~/Content/images/site/footer-icon-socia-vk.png" alt="ico" /></a>
-                                    <a href="https://ok.ru/profile/563866844247" target="_blank"><img src="~/Content/images/site/footer-icon-socia-okl.png" alt="ico" /></a>
+                                    <a v-bind:href="linkInstContacts" target="_blank"><img src="~/Content/images/site/footer-icon-socia-instagraml.png" alt="ico" /></a>
+                                    <a v-bind:href="linkVkContacts" target="_blank"><img src="~/Content/images/site/footer-icon-socia-vk.png" alt="ico" /></a>
+                                    <a v-bind:href="linkOkContacts" target="_blank"><img src="~/Content/images/site/footer-icon-socia-okl.png" alt="ico" /></a>
                                 </span>
                             </p>
                         </div>

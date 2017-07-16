@@ -1,13 +1,16 @@
 ﻿using shtuki_tuki.domain.Enumerables;
 using shtuki_tuki.domain.Repository;
+using shtuki_tuki.web.Infrastructure;
 using System.Web.Http;
 
 namespace shtuki_tuki.web.Controllers
 {
-    public class WebPublicGoodsController : ApiController
+    [CustomAuthorize(Roles = "Administrators")]
+    public class WebGoodsController : ApiController
     {
         private readonly GoodsRepository _repositoryGoods = GoodsRepository.Current;
 
+        [AllowAnonymous]
         [HttpGet]
         public IHttpActionResult GoodCollectionCategory(ushort category)
         {
@@ -17,19 +20,15 @@ namespace shtuki_tuki.web.Controllers
             return Ok(listgoods);
         }
 
+        [AllowAnonymous]
         [HttpGet]
         public IHttpActionResult GoodCollectionPop()
         {
             var listgoods = _repositoryGoods.GetGoodCollectionPop();
             return Ok(listgoods);
-        }
+        }          
 
-        //[HttpGet]
-        //public IHttpActionResult Good(long id)
-        //{
-        //    return Ok();
-        //}               
-
+        [AllowAnonymous]
         [HttpGet]
         public IHttpActionResult GoodCollectionOrder()
         {

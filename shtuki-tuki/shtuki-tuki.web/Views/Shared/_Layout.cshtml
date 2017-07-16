@@ -12,20 +12,21 @@
 
     @RenderSection("Styles", required: false)
     @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/vue")
 </head>
 <body>
     <nav class="navbar-fixed-top">
         <div class="container">
             <div class="row">
-                <div class="col-md-2 nav-social">
+                <div class="col-md-2 nav-social vue-social-nav">
                     <div class="col-md-4 text-center">
-                        <a href="https://www.instagram.com/design_shtuki" target="_blank"><img src="~/Content/images/site/nav-social-instagram.png" alt="link to instagram social network" /></a>
+                        <a v-bind:href="linkInstNav" target="_blank"><img src="~/Content/images/site/nav-social-instagram.png" alt="link to instagram social network" /></a>
                     </div>
                     <div class="col-md-4 text-center">
-                        <a href="https://ok.ru/profile/563866844247" target="_blank"><img src="~/Content/images/site/nav-social-ok.png" alt="link to odnoklassniki social network" /></a>
+                        <a v-bind:href="linkOkNav" target="_blank"><img src="~/Content/images/site/nav-social-ok.png" alt="link to odnoklassniki social network" /></a>
                     </div>
                     <div class="col-md-4 text-center">
-                        <a href="https://vk.com/club129227002" target="_blank"><img src="~/Content/images/site/nav-social-vk.png" alt="link to vkontakte social network" /></a>
+                        <a v-bind:href="linkVkNav" target="_blank"><img src="~/Content/images/site/nav-social-vk.png" alt="link to vkontakte social network" /></a>
                     </div>
                     <div class="col-md-12 nav-logo text-center">
                         <a href="@Url.Action("Index", "Home")"><img src="~/Content/images/site/nav-logo.png" alt="logo link to main page" /></a>
@@ -37,7 +38,7 @@
                         <li><a href="#">Лестницы</a></li>
                         <li><a href="#">Мебель</a></li>
                         <li><a href="#">Светильники</a></li>
-                        <li><a href="#">Эксперименты дизайнеров</a></li>
+                        <li><a href="#">Эксперименты дизайнеров</a></li>                        
                     </ul>
                 </div>
                 <div class="col-md-1 nav-contacts text-right">
@@ -52,13 +53,14 @@
     @RenderSection("Body")
     <footer>
         <div class="container">
-            <div class="row">
+            <div class="row vue-social-footer">
                 <div class="col-md-3 footer-logo">
                     <div class="col-md-12 footer-content">
                         <img src="~/Content/images/site/footer-logo.png" alt="footer logo" />
-                        <p class="footer-logo-text">
-                            Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.
-                            Lorem Ipsum используют потому
+                        <p class="footer-logo-text"> 
+                            ИП Мойсеева Елена Сергеевна<br />
+                            ИНН: 09010539066 <br />
+                            ОГРНИП: 317265100077869
                         </p>
                         <p class="footer-logo-copy-top">&copy;Copyright 2017</p>
                         <p class="footer-logo-copy-bottom">Все права защищены</p>
@@ -81,16 +83,16 @@
                         <h3>КОНТАКТЫ</h3>
                         <img src="~/Content/images/site/footer-watts.png" alt="footer watsapp icon" />
                         <img src="~/Content/images/site/footer-viber.png" alt="footer viber icon" />
-                        <p>+7 (928) 342-47-53</p>
-                        <p><img src="~/Content/images/site/footer-mail.png" /><span>shtuki-tuki@yandex.ru</span></p>
+                        <p>{{phoneFooter}}</p>
+                        <p><img src="~/Content/images/site/footer-mail.png" /><span>{{mailFooter}}</span></p>
                     </div>
                 </div>
                 <div class="col-md-3 footer-social">
                     <div class="col-md-12 footer-content">
                         <h3>МЫ В СОЦ СЕТЯХ</h3>
-                        <a href="#"><img src="~/Content/images/site/footer-social-instagram.png" alt="footer instagram icon" /></a>
-                        <a href="#"><img src="~/Content/images/site/footer-social-ok.png" alt="footer odnoklassniki icon" /></a>
-                        <a href="#"><img src="~/Content/images/site/footer-social-vk.png" alt="footer vkontakte icon" /></a>
+                        <a v-bind:href="linkInstFooter" target="_blank"><img src="~/Content/images/site/footer-social-instagram.png" alt="footer instagram icon" /></a>
+                        <a v-bind:href="linkOkFooter" target="_blank"><img src="~/Content/images/site/footer-social-ok.png" alt="footer odnoklassniki icon" /></a>
+                        <a v-bind:href="linkVkFooter" target="_blank"><img src="~/Content/images/site/footer-social-vk.png" alt="footer vkontakte icon" /></a>
                     </div>
                 </div>
             </div>
@@ -98,6 +100,7 @@
     </footer>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    <script src="~/Scripts/Vue/SocialNetworks.js" type="text/javascript"></script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>
