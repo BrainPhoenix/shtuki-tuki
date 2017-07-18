@@ -6,7 +6,7 @@ namespace shtuki_tuki.domain.DbProject
 {
     class ShtukiDbContext : DbContext
     {
-        public ShtukiDbContext() : base("local_shtukituki")
+        public ShtukiDbContext() : base("u0295663_shtukituki")
         {
             Database.SetInitializer(new CreateDatabaseIfNotExists<ShtukiDbContext>());
         }

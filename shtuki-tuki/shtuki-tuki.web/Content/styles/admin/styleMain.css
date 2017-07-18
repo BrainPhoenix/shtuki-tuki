@@ -1,0 +1,104 @@
+﻿/*///////////////////ALL RESOLUTION///////////////////*/
+.admin-panel-main-page {
+    width: 100%;
+}
+
+/*///////////////////DESKTOP///////////////////*/
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .admin-panel-main-page {
+        margin-top: 90px;
+    }
+
+    .admin-panel-main {
+        margin-bottom: 50px;
+    }
+
+    .admin-panel-main-goods,
+    .admin-panel-main-video,
+    .admin-panel-main-reviews,
+    .admin-panel-main-offers,
+    .admin-panel-main-currency {
+        background-color: #ffffff;
+        padding: 20px 0 0 0;
+        font-size: 2em;
+        font-weight: 500;
+    }
+
+    .admin-panel-main-goods div img,
+    .admin-panel-main-video div img,
+    .admin-panel-main-reviews div img,
+    .admin-panel-main-offers div img,
+    .admin-panel-main-currency div img {
+        margin-right: 20px;
+        margin-top: -5px;
+    }
+
+    .admin-panel-main-goods {
+        color: #4caf50;
+    }
+
+    .admin-panel-main-goods-line,
+    .admin-panel-main-video-line,
+    .admin-panel-main-reviews-line,
+    .admin-panel-main-offers-line,
+    .admin-panel-main-currency-line {
+        margin: 20px 0 0 0;
+        height: 10px;
+        width: 100%;
+    }
+
+    .admin-panel-main-goods-line {
+        background-color: #4caf50;
+    }
+
+    .admin-panel-main-video-line {
+        background-color: #eb6e47;
+    }
+
+    .admin-panel-main-reviews-line {
+        background-color: #3f51b5;
+    }
+
+    .admin-panel-main-offers-line {
+        background-color: #ffb333;
+    }
+
+    .admin-panel-main-currency-line {
+        background-color: #794b7f;
+    }
+
+    .admin-panel-main-video {
+        color: #eb6e47;
+    }
+
+    .admin-panel-main-reviews {
+        color: #3f51b5;
+    }
+
+    .admin-panel-main-offers {
+        color: #ffb333;
+    }
+
+    .admin-panel-main-currency {
+        color: #794b7f;
+    }
+}
+
+/*///////////////////TABLET///////////////////*/
+/* Small devices (tablets, 768px and up 992) */
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+/*///////////////////MOBILE///////////////////*/
+/* Small devices (mobile, 320px and up 767) */
+@media (min-width: 320px) and (max-width: 767px) {
+
+}
+

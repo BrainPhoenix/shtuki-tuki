@@ -1,18 +1,15 @@
 ﻿using shtuki_tuki.domain.Enumerables;
 using shtuki_tuki.domain.Repository;
-using shtuki_tuki.web.Infrastructure;
 using System.Web.Http;
 
 namespace shtuki_tuki.web.Controllers
 {
-    [CustomAuthorize(Roles = "Administrators")]
     public class WebGoodsController : ApiController
     {
         private readonly GoodsRepository _repositoryGoods = GoodsRepository.Current;
 
-        [AllowAnonymous]
         [HttpGet]
-        public IHttpActionResult GoodCollectionCategory(ushort category)
+        public IHttpActionResult GoodCollectionCategory(int category)
         {
             var typeCategory = SetCategory(category);
             var listgoods = _repositoryGoods.GetGoodCollectionCategory(typeCategory);
@@ -20,7 +17,6 @@ namespace shtuki_tuki.web.Controllers
             return Ok(listgoods);
         }
 
-        [AllowAnonymous]
         [HttpGet]
         public IHttpActionResult GoodCollectionPop()
         {
@@ -28,19 +24,12 @@ namespace shtuki_tuki.web.Controllers
             return Ok(listgoods);
         }          
 
-        [AllowAnonymous]
-        [HttpGet]
-        public IHttpActionResult GoodCollectionOrder()
-        {
-            return Ok();
-        }
-
         /// <summary>
         /// Установка занчения TypeCategory для коллекции получаемых товаров
         /// </summary>
         /// <param name="category">Значение Id элемента перечисления TypeCategory</param>
         /// <returns></returns>
-        private TypeCategory SetCategory(ushort category)
+        private TypeCategory SetCategory(int category)
         {            
             TypeCategory result = new TypeCategory();
 

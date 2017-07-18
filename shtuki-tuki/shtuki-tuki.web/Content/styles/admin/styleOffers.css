@@ -1,0 +1,104 @@
+﻿/*///////////////////ALL RESOLUTION///////////////////*/
+
+
+/*///////////////////DESKTOP///////////////////*/
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .admin-panel-offers {
+        margin-top: 30px;
+    }
+
+    .offers-list-nav {
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+        .offers-list-nav a {
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-right: 30px;
+        }
+
+        .offers-list-nav span {
+            font-size: 1.4em;
+            font-weight: 600;
+        }
+
+    .offers-all-table {
+        margin: 0;
+        padding: 0;
+    }
+
+    .offers-all-table table{
+        width: 100%;
+        border: 1px solid #d9dfe9;
+        background-color: #ffffff;
+        margin: 0;
+        padding: 0;
+    }
+
+    .offers-all-table table thead,
+    .offers-all-table table thead tr,
+    .offers-all-table table tbody,
+    .offers-all-table table tbody tr
+     {
+        margin: 0;
+        padding: 0;
+    }
+
+    .offers-all-table table thead tr {
+        border-bottom: 1px solid #d9dfe9;
+    }
+
+    .offers-all-table table thead tr th {
+        padding-top: 10px;
+        padding-left: 20px;
+        border-bottom: none;
+        color: #6a6c6f;
+        font-size: 1.3em;
+        font-weight: 500;
+    }
+
+    .offers-all-table table tbody tr {
+        border-bottom: 1px solid #d9dfe9;
+    }
+
+    .offers-all-table table tbody tr td {
+        padding-top: 10px;
+        padding-left: 20px;
+        border-top: none;
+        color: #3f51b5;
+        font-size: 1.3em;
+        font-weight: 500;
+        vertical-align: inherit;
+    }
+
+    .offers-all-table table tbody tr td p a,
+    .offers-all-table table tbody tr td p a:hover {
+        font-size: 0.9em;
+        text-decoration: none;
+        color: #6a6c6f;
+    }
+
+    .offers-all-table table tbody tr td p a:hover {
+        color: #444547;
+    }
+
+    .offers-all-table table tbody tr td p a img {
+        margin-right: 10px;
+    }
+}
+
+/*///////////////////TABLET///////////////////*/
+/* Small devices (tablets, 768px and up 992) */
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+/*///////////////////MOBILE///////////////////*/
+/* Small devices (mobile, 320px and up 767) */
+@media (min-width: 320px) and (max-width: 767px) {
+}

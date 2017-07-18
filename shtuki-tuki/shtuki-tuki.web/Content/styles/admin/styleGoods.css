@@ -1,0 +1,371 @@
+﻿/*///////////////////ALL RESOLUTION///////////////////*/
+
+
+/*///////////////////DESKTOP///////////////////*/
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    /*Caption*/
+    .goods-nav {
+        margin-top: 30px;
+        margin-bottom: 40px;
+    }
+
+        .goods-nav a {
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-right: 30px;
+        }
+
+        .goods-nav span {
+            font-size: 1.4em;
+            font-weight: 600;
+        }
+
+    /*Control*/
+    .goods-control {
+        margin: 10px 0 30px 0;
+        padding: 0;
+    }
+
+    .goods-create-view,
+    .goods-create-view:hover {
+        font-size: 1em;
+        font-weight: 500;
+        color: #ffffff;
+        background-color: #4cb050;
+        padding: 10px 20px 10px 20px;
+        margin: 0;
+        border: none;
+    }
+
+        .goods-create-view:hover {
+            background-color: #22b628;
+        }
+
+    .goods-control div {
+        margin: 0;
+        padding: 0;
+    }
+
+        .goods-control div span {
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-right: 20px;
+        }
+
+        .goods-control div select {
+            margin: 0;
+            padding: 10px;
+            font-size: 1.2em;
+            font-weight: 500;
+            border: 1px solid #dbe3f1;
+        }
+
+    /*Goods List*/
+    .goods-all-table {
+        border: 1px solid #dbe3f1;
+        background-color: #ffffff;
+        padding: 0;
+    }
+
+        .goods-all-table table {
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+            .goods-all-table table thead tr th {
+                font-size: 1.1em;
+                font-weight: 500;
+                color: #88898c;
+                border-bottom: 1px solid #dbe3f1;
+                border-top: 1px solid #dbe3f1;
+            }
+
+
+            .goods-all-table table tbody,
+            .goods-all-table table tbody tr td {
+                border-bottom: 1px solid #dbe3f1;
+                border-top: 1px solid #dbe3f1;
+            }
+
+    .goods-table-img img {
+        max-width: 85px;
+    }
+
+    .goods-table-name {
+        font-size: 1.2em;
+        color: #3f51b5;
+    }
+
+    .goods-table-price {
+        font-size: 1.2em;
+        color: #282828;
+    }
+
+    .checkbox {
+        position: relative;
+        padding-left: 15px;
+        margin: 0;
+    }
+
+        .checkbox input[type=checkbox] {
+            display: none;
+        }
+
+        .checkbox label:after {
+            content: '';
+            display: block;
+            height: 20px;
+            width: 20px;
+            outline: 1px solid #cad7ea;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .checkbox input[type=checkbox]:checked + label:after {
+            outline: 1px solid #4caf50;
+            border: 2px solid #fff;
+            width: 20px;
+            height: 20px;
+            background-color: #4caf50;
+        }
+
+    .goods-table-control p a,
+    .goods-table-control p a:hover,
+    .goods-table-control p a:active {
+        text-decoration: none;
+        color: #88898c;
+        font-size: 1.2em;
+        font-weight: 500;
+    }
+
+        .goods-table-control p a img {
+            max-width: 25px;
+            margin-right: 10px;
+        }
+
+    /*Goods Create*/
+    .admin-panel-goods-create,
+    .admin-panel-goods-edit {
+        padding: 0;
+        margin-top: 30px;
+    }
+
+        .admin-panel-goods-create form,
+        .goods-control-create {
+            margin: 0;
+            padding: 0;
+        }
+
+            .goods-control-create div {
+                padding: 0;
+            }
+
+                .goods-control-create div h3 {
+                    margin: 10px 0 0 20px;
+                    padding: 0;
+                    font-size: 1.4em;
+                    font-weight: 600;
+                }
+
+                .goods-control-create div input[type="submit"] {
+                    font-size: 1em;
+                    font-weight: 500;
+                    color: #ffffff;
+                    background-color: #4cb050;
+                    padding: 10px 20px 10px 20px;
+                    margin: 0 20px 0 0;
+                    border: none;
+                    width: 25%;
+                }
+
+                    .goods-control-create div input[type="submit"]:hover {
+                        background-color: #22b628;
+                    }
+
+                .goods-control-create div input[type="button"] {
+                    font-size: 1em;
+                    font-weight: 500;
+                    color: #ffffff;
+                    background-color: #e64a19;
+                    padding: 10px 20px 10px 20px;
+                    margin: 0 20px 0 0;
+                    border: none;
+                    width: 25%;
+                }
+
+                    .goods-control-create div input[type="button"]:hover {
+                        background-color: #fa4810;
+                    }
+
+    .goods-create-content {
+        margin: 30px 0 0 0;
+        padding-top: 30px;
+        background-color: #ffffff;
+        border: 1px solid #d7e0f1;
+    }
+
+    .goods-create-content div {
+        margin-bottom: 20px;
+    }
+
+     .goods-create-content div label {
+         margin: 0;
+         padding-top: 10px;
+         font-size: 1.2em;
+         font-weight: 500;
+         color: #222222;
+         width: 150px;
+         vertical-align: top;
+     }
+
+     .goods-create-content div select {
+            margin: 0;
+            padding: 10px;
+            font-size: 1.2em;
+            font-weight: 500;
+            border: 1px solid #dbe3f1;
+     }
+
+     .goods-create-content div input,
+      .goods-create-content div textarea{
+         margin: 0;
+         padding: 10px;
+         font-size: 1.2em;
+         font-weight: 500;
+         border: 1px solid #dbe3f1;
+         width: 260px;
+     }
+
+     .goods-create-content div textarea {
+         width: 400px;
+         height: 100px;
+     }
+
+     .message-create {
+         font-size: 1.2em;
+         margin-bottom: 10px;
+     }
+
+     /*Goods Edit*/
+     .goods-edit-img-avatar img{
+         max-width: 90%;
+     }
+
+     .good-middle-edit {
+         padding-top: 30px;
+         background-color: #ffffff;
+         border: 1px solid #d7e0f1;
+     }
+
+     .edit-middle-caption p {
+         padding-top: 10px;
+         font-size: 1.2em;
+         font-weight: 600;
+         color: #000000;
+     }
+
+     .form-good-middle div input[type="file"]{
+         margin: 0;
+         padding: 10px;
+         font-size: 1.2em;
+         font-weight: 500;
+         border: 1px solid #dbe3f1;
+         width: 260px;
+     }
+
+     .form-good-middle div span input[type="submit"] {
+         margin: 0;
+         padding: 13px;
+         font-size: 1.2em;
+         font-weight: 500;
+         color: #ffffff;
+         background-color: #4cb050;
+         border: none;
+         width: 120px;
+         margin-left: 20px;
+     }
+
+     .form-good-middle div span input[type="submit"]:hover {
+         background-color: #22b628;
+     }
+
+     .edit-middle-img-frame {
+         height: 150px;
+         margin: 20px 0 20px 0;
+     }
+
+     .edit-middle-img-frame div img {
+         max-width: 100%;
+         margin-bottom: 10px;
+     }
+
+     .edit-middle-img-frame div div a img{
+         max-width: 20px;
+         padding-top: 10px;
+     }
+
+     .edit-middle-img-frame div div a, 
+     .edit-middle-img-frame div div a:hover{
+         color: #6e7072;
+         font-size: 1.1em;
+         font-weight: 600;
+         text-decoration: none;
+     }
+
+     .good-edit-relation {
+         padding-bottom: 50px;
+     }
+
+     .goods-relation-select span,
+     .goods-relation-select p{
+         font-size: 1.1em;
+         font-weight: 500;
+         color: #676767;
+     }
+
+     .goods-relation-select p {
+         margin-top: 10px;
+         margin-bottom: 20px;
+     }
+
+     .goods-relation-select select{
+            margin: 0 0 20px 0;
+            padding: 5px;
+            font-size: 1em;
+            font-weight: 500;
+            border: 1px solid #dbe3f1;
+     }
+
+     .goods-relation-select div p img{
+         max-width: 25px;
+         margin-right: 10px;
+     }
+
+     .goods-relation-select div p {
+         padding-bottom: 10px;
+         border-bottom: 1px solid #d7e0f1;
+         width: 90%;
+     }
+
+     .goods-relation-select div p a{
+         color: #282828;
+         font-size: 1.2em;
+         text-decoration: none;
+     }
+}
+
+/*///////////////////TABLET///////////////////*/
+/* Small devices (tablets, 768px and up 992) */
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+/*///////////////////MOBILE///////////////////*/
+/* Small devices (mobile, 320px and up 767) */
+@media (min-width: 320px) and (max-width: 767px) {
+}

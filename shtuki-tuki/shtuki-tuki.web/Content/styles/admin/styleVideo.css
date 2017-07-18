@@ -1,0 +1,99 @@
+﻿/*///////////////////ALL RESOLUTION///////////////////*/
+
+
+/*///////////////////DESKTOP///////////////////*/
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .video-control-create {
+        margin: 30px 0 20px 0;
+        padding: 0;
+    }
+
+        .video-control-create div h3 {
+            margin: -10px 0 0 0;
+            padding: 0;
+            font-size: 1.4em;
+            font-weight: 600;
+        }
+
+        .video-control-create div a,
+        .video-control-create div a:hover {
+            font-size: 1em;
+            font-weight: 500;
+            color: #ffffff;
+            background-color: #e64a19;
+            padding: 10px 30px 10px 30px;
+            border: none;
+            width: 30%;
+            text-decoration: none;
+        }
+
+            .video-control-create div a:hover {
+                background-color: #fa4810;
+            }
+
+    .video-panel {
+        border: 1px solid #d7e0f1;
+        background-color: #ffffff;
+        padding: 30px 0 20px 0;
+    }
+
+    .video-panel-upload {
+        margin-bottom: 30px;
+    }
+
+    .video-panel-p p {
+        font-size: 1.2em;
+        color: #000000;
+        font-weight: 600;
+        margin-left: 15px;
+    }
+
+    .video-panel-form form div input[type="text"] {
+        border: 1px solid #d7e0f1;
+        border-radius: 0;
+        background-color: #ffffff;
+        padding: 5px;
+        font-size: 1.1em;
+        width: 40%;
+        margin-right: 10px;
+    }
+
+    .video-panel-form form div input[type="submit"] {
+        border: 1px solid #4cb050;
+        border-radius: 0;
+        background-color: #4cb050;
+        color: #ffffff;
+        padding: 5px;
+        font-size: 1.1em;
+        width: 20%;
+    }
+
+        .video-panel-form form div input[type="submit"]:hover {
+            border: 1px solid #22b628;
+            background-color: #22b628;
+        }
+
+    .video-list-item div div a,
+    .video-list-item div div a:hover {
+        color: #282828;
+        font-size: 1.2em;
+        font-weight: 500;
+        text-decoration: none;
+        margin: 20px 0 10px 0;
+    }
+}
+
+/*///////////////////TABLET///////////////////*/
+/* Small devices (tablets, 768px and up 992) */
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+/*///////////////////MOBILE///////////////////*/
+/* Small devices (mobile, 320px and up 767) */
+@media (min-width: 320px) and (max-width: 767px) {
+}

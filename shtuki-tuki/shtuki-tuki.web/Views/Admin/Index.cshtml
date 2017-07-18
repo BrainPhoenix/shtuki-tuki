@@ -1,8 +1,95 @@
-﻿
-@{
-    ViewBag.Title = "Index";
+﻿@{
+    ViewBag.Title = "Панель управления сайтом";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h2>Index Admin</h2>
+@section Styles
+{
+    <link href="~/Content/styles/admin/styleMain.css" rel="stylesheet" />
+}
+
+@section Body{
+    @Html.Partial("NavigationAdmin")
+    <div class="admin-panel-main-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 admin-panel-main">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-4 admin-panel-main-button">
+                        <a href="@Url.Action("AdminGoods")">
+                            <div class="col-md-12 admin-panel-main-goods">
+                                <div class="col-md-12 text-center admin-panel-main-goods-text">
+                                    <img src="~/Content/images/site/icon-main-product.png" alt="icon" /><span>Товары</span>
+                                </div>
+                                <div class="col-md-12 admin-panel-main-goods-line"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 admin-panel-main-button">
+                        <a href="@Url.Action("AdminVideo")">
+                            <div class="col-md-12 admin-panel-main-video">
+                                <div class="col-md-12 text-center admin-panel-main-video-text">
+                                    <img src="~/Content/images/site/icon-main-video.png" alt="icon" /><span>Видео</span>
+                                </div>
+                                <div class="col-md-12 admin-panel-main-video-line"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+                <div class="col-md-12 admin-panel-main">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-4 admin-panel-main-button">
+                        <a href="@Url.Action("AdminReviews")">
+                            <div class="col-md-12 admin-panel-main-reviews">
+                                <div class="col-md-12 text-center admin-panel-main-reviews-text">
+                                    <img src="~/Content/images/site/icon-main-reviews.png" alt="icon" /><span>Отзывы</span>
+                                </div>
+                                <div class="col-md-12 admin-panel-main-reviews-line"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 admin-panel-main-button">
+                        <a href="@Url.Action("AdminOffers")">
+                            <div class="col-md-12 admin-panel-main-offers">
+                                <div class="col-md-12 text-center admin-panel-main-offers-text">
+                                    <img src="~/Content/images/site/icon-main-offers.png" alt="icon" /><span>Спецпредложения</span>
+                                </div>
+                                <div class="col-md-12 admin-panel-main-offers-line"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+                <div class="col-md-12 admin-panel-main">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-4 admin-panel-main-button">
+                        <a href="@Url.Action("AdminCurrency")">
+                            <div class="col-md-12 admin-panel-main-currency">
+                                <div class="col-md-12 text-center admin-panel-main-currency-text">
+                                    <img src="~/Content/images/site/icon-main-currency.png" alt="icon" /><span>Валюта</span>
+                                </div>
+                                <div class="col-md-12 admin-panel-main-currency-line"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 admin-panel-main-button">
+                        <a href="@Url.Action("AdminCurrency")">
+                            <div class="col-md-12 admin-panel-main-currency">
+                                <div class="col-md-12 text-center admin-panel-main-currency-text">
+                                    <img src="~/Content/images/site/icon-main-currency.png" alt="icon" /><span>Главная страница</span>
+                                </div>
+                                <div class="col-md-12 admin-panel-main-currency-line"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
+
 

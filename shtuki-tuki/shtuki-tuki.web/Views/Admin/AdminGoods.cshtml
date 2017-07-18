@@ -1,0 +1,99 @@
+﻿
+@{
+    ViewBag.Title = "Товары - панель управления сайтом";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@section Styles{
+    <link href="~/Content/styles/admin/styleGoods.css" rel="stylesheet" />
+}
+
+@section Body{
+    @Html.Partial("NavigationAdmin")
+    <div class="admin-panel-goods">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 admin-panel-goods-list">
+                    <div class="col-md-12 goods-nav">
+                        <a href="@Url.Action("Index")"><< Назад</a><span>СПИСОК ТОВАРОВ</span>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="col-md-6 text-left">
+                            <input class="goods-create-view" value="+ ДОБАВИТЬ ТОВАР" type="button" onclick="linkGoodNew()"/>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8 goods-filter-navigation">
+                            <ul class="col-md-12 text-justify">
+                                <li><a href="#">Двери</a></li>
+                                <li><a href="#">Лестницы</a></li>
+                                <li><a href="#">Мебель</a></li>
+                                <li><a href="#">Светильники</a></li>
+                                <li><a href="#">Эксперименты дизайнеров</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-2"></div>
+                        <div class="col-md-12 goods-all-table">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">Фото</th>
+                                        <th>Название</th>
+                                        <th>Цена</th>
+                                        <th>Хит</th>
+                                        <th>Новинка</th>
+                                        <th>Популярный</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="goods-table-img text-center">
+                                            <img src="" alt="Goods Avatar" />
+                                        </td>
+                                        <td class="goods-table-name">{{good.Good.Name}}</td>
+                                        <td class="goods-table-price">{{good.Good.Price}} $</td>
+                                        <td class="goods-table-bool">
+                                            <div class="checkbox">
+                                                <input type="checkbox" id="{{good.Good.HitId}}" ng-model="good.Good.Hit" ng-click="CheckedHit(good.Good.Hit, good.Good.Id)"><label for="{{good.Good.HitId}}"></label>
+                                            </div>
+                                        </td>
+                                        <td class="goods-table-bool">
+                                            <div class="checkbox">
+                                                <input type="checkbox" id="{{good.Good.NewId}}" ng-model="good.Good.New" ng-click="CheckedNew(good.Good.New, good.Good.Id)"><label for="{{good.Good.NewId}}"></label>
+                                            </div>
+                                        </td>
+                                        <td class="goods-table-bool">
+                                            <div class="checkbox">
+                                                <input type="checkbox" id="{{good.Good.PopId}}" ng-model="good.Good.Pop" ng-click="CheckedNew(good.Good.Pop, good.Good.Id)"><label for="{{good.Good.PopId}}"></label>
+                                            </div>
+                                        </td>
+                                        <td class="goods-table-control">
+                                            <p>
+                                                <a href="#" ng-click="EditView(good.Good.Id)"><img src="~/Content/images/site/admin-goods-icon-edit.png" /> Редактировать</a>
+                                            </p>
+                                            <p>
+                                                <a href="#" ng-click="Delete(good.Good.Id)"><img src="~/Content/images/site/admin-goods-icon-delete.png"/> Удалить</a>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts{
+    <script type="text/javascript">
+        function linkGoodNew() {
+            alert("1");
+            window.location.href = @Url.Action("AdminCreateGoods", "Admin");
+        }
+    </script>
+}
+

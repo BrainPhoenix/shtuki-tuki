@@ -1,0 +1,108 @@
+﻿/*///////////////////ALL RESOLUTION///////////////////*/
+
+
+/*///////////////////DESKTOP///////////////////*/
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .carrency-panel-goods {
+        margin-top: 30px;
+        padding: 0;
+    }
+
+    .currency-caption {
+        margin: 0 0 20px 0;
+        padding: 0;
+    }
+
+        .currency-caption div {
+            margin: 0;
+            padding: 0;
+        }
+
+            .currency-caption div h3 {
+                margin: 0;
+                padding: 0;
+                font-size: 1.4em;
+                font-weight: 600;
+            }
+
+            .currency-caption div a,
+            .video-control-create div a:hover {
+                font-size: 1em;
+                font-weight: 500;
+                color: #ffffff;
+                background-color: #e64a19;
+                border: 1px solid #e64a19;
+                padding: 12px 30px 12px 30px;
+                border: none;
+                text-decoration: none;
+                width: 140px;
+            }
+
+            .currency-caption div input[type="submit"] {
+                font-size: 1em;
+                font-weight: 500;
+                color: #ffffff;
+                border: none;
+                background-color: #4cb050;
+                padding: 10px 30px 10px 30px;
+                border: none;
+                width: 120px;
+            }
+
+                .currency-caption div input[type="submit"]:hover {
+                    background-color: #22b628;
+                }
+
+    .currency-panel {
+        border: 1px solid #d7e0f1;
+        background-color: #ffffff;
+    }
+
+        .currency-panel table thead tr th {
+            border: none;
+            font-size: 1.2em;
+            color: #6a6c6f;
+            font-weight: 500;
+            padding: 20px 0 10px 0;
+        }
+
+        .currency-panel table tbody tr td {
+            font-size: 1.2em;
+            font-weight: 500;
+        }
+
+            .currency-panel table tbody tr td div {
+                margin: 0;
+                padding: 0;
+            }
+
+                .currency-panel table tbody tr td div input[type="number"] {
+                    border: 1px solid #d7e0f1;
+                    font-size: 1.1em;
+                    padding: 5px;
+                    width: 30%;
+                }
+
+                .currency-panel table tbody tr td div input[type="number"] {
+                    -moz-appearance: textfield;
+                }
+
+                    .currency-panel table tbody tr td div input[type="number"]::-webkit-inner-spin-button {
+                        display: none;
+                    }
+}
+
+/*///////////////////TABLET///////////////////*/
+/* Small devices (tablets, 768px and up 992) */
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+/*///////////////////MOBILE///////////////////*/
+/* Small devices (mobile, 320px and up 767) */
+@media (min-width: 320px) and (max-width: 767px) {
+}

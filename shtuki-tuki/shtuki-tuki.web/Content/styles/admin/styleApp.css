@@ -1,0 +1,32 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i,800,800i&subset=cyrillic');
+
+body {
+    background-color: #edf0f5;
+    font-family: 'Open Sans', sans-serif;
+    font-size: small;
+}
+
+.nav-admin-panel {
+    width: 100%;
+    background-color: #3f51b5;
+    color: #ffffff;
+    padding: 15px 0 10px 0;
+    font-size: 1.2em;
+}
+
+.nav-admin-panel-exit-link a,
+.nav-admin-panel-exit-link a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.admin-copy {
+    margin: 40px 0 0 0;
+    padding: 0;
+}
+
+.admin-copy p {
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #6f6f6f;
+}
