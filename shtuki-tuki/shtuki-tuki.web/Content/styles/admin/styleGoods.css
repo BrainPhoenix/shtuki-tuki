@@ -25,6 +25,34 @@
             font-weight: 600;
         }
 
+    .goods-filter-navigation {
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+
+        .goods-filter-navigation ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+            .goods-filter-navigation ul li {
+                display: inline-block;
+                margin: 0 20px 0 20px;
+                font-size: 1.1em;
+                font-weight: 600;
+            }
+
+                .goods-filter-navigation ul li a,
+                .goods-filter-navigation ul li a:visited {
+                    color: #444343;
+                    text-decoration: none;
+                }
+
+                .goods-filter-navigation ul li a:hover {
+                    border-bottom: 2px solid #444343;
+                }
+
     /*Control*/
     .goods-control {
         margin: 10px 0 30px 0;
@@ -203,6 +231,10 @@
                         background-color: #fa4810;
                     }
 
+    .goods-control-create {
+        margin-top: 30px;
+    }
+
     .goods-create-content {
         margin: 30px 0 0 0;
         padding-top: 30px;
@@ -210,154 +242,154 @@
         border: 1px solid #d7e0f1;
     }
 
-    .goods-create-content div {
+        .goods-create-content div {
+            margin-bottom: 20px;
+        }
+
+            .goods-create-content div label {
+                margin: 0;
+                padding-top: 10px;
+                font-size: 1.2em;
+                font-weight: 500;
+                color: #222222;
+                width: 150px;
+                vertical-align: top;
+            }
+
+            .goods-create-content div select {
+                margin: 0;
+                padding: 10px;
+                font-size: 1.2em;
+                font-weight: 500;
+                border: 1px solid #dbe3f1;
+            }
+
+            .goods-create-content div input,
+            .goods-create-content div textarea {
+                margin: 0;
+                padding: 10px;
+                font-size: 1.2em;
+                font-weight: 500;
+                border: 1px solid #dbe3f1;
+                width: 260px;
+            }
+
+            .goods-create-content div textarea {
+                width: 400px;
+                height: 100px;
+            }
+
+    .message-create {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+
+    /*Goods Edit*/
+    .goods-edit-img-avatar img {
+        max-width: 90%;
+    }
+
+    .good-middle-edit {
+        padding-top: 30px;
+        background-color: #ffffff;
+        border: 1px solid #d7e0f1;
+    }
+
+    .edit-middle-caption p {
+        padding-top: 10px;
+        font-size: 1.2em;
+        font-weight: 600;
+        color: #000000;
+    }
+
+    .form-good-middle div input[type="file"] {
+        margin: 0;
+        padding: 10px;
+        font-size: 1.2em;
+        font-weight: 500;
+        border: 1px solid #dbe3f1;
+        width: 260px;
+    }
+
+    .form-good-middle div span input[type="submit"] {
+        margin: 0;
+        padding: 13px;
+        font-size: 1.2em;
+        font-weight: 500;
+        color: #ffffff;
+        background-color: #4cb050;
+        border: none;
+        width: 120px;
+        margin-left: 20px;
+    }
+
+        .form-good-middle div span input[type="submit"]:hover {
+            background-color: #22b628;
+        }
+
+    .edit-middle-img-frame {
+        height: 150px;
+        margin: 20px 0 20px 0;
+    }
+
+        .edit-middle-img-frame div img {
+            max-width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .edit-middle-img-frame div div a img {
+            max-width: 20px;
+            padding-top: 10px;
+        }
+
+        .edit-middle-img-frame div div a,
+        .edit-middle-img-frame div div a:hover {
+            color: #6e7072;
+            font-size: 1.1em;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+    .good-edit-relation {
+        padding-bottom: 50px;
+    }
+
+    .goods-relation-select span,
+    .goods-relation-select p {
+        font-size: 1.1em;
+        font-weight: 500;
+        color: #676767;
+    }
+
+    .goods-relation-select p {
+        margin-top: 10px;
         margin-bottom: 20px;
     }
 
-     .goods-create-content div label {
-         margin: 0;
-         padding-top: 10px;
-         font-size: 1.2em;
-         font-weight: 500;
-         color: #222222;
-         width: 150px;
-         vertical-align: top;
-     }
+    .goods-relation-select select {
+        margin: 0 0 20px 0;
+        padding: 5px;
+        font-size: 1em;
+        font-weight: 500;
+        border: 1px solid #dbe3f1;
+    }
 
-     .goods-create-content div select {
-            margin: 0;
-            padding: 10px;
+    .goods-relation-select div p img {
+        max-width: 25px;
+        margin-right: 10px;
+    }
+
+    .goods-relation-select div p {
+        padding-bottom: 10px;
+        border-bottom: 1px solid #d7e0f1;
+        width: 90%;
+    }
+
+        .goods-relation-select div p a {
+            color: #282828;
             font-size: 1.2em;
-            font-weight: 500;
-            border: 1px solid #dbe3f1;
-     }
-
-     .goods-create-content div input,
-      .goods-create-content div textarea{
-         margin: 0;
-         padding: 10px;
-         font-size: 1.2em;
-         font-weight: 500;
-         border: 1px solid #dbe3f1;
-         width: 260px;
-     }
-
-     .goods-create-content div textarea {
-         width: 400px;
-         height: 100px;
-     }
-
-     .message-create {
-         font-size: 1.2em;
-         margin-bottom: 10px;
-     }
-
-     /*Goods Edit*/
-     .goods-edit-img-avatar img{
-         max-width: 90%;
-     }
-
-     .good-middle-edit {
-         padding-top: 30px;
-         background-color: #ffffff;
-         border: 1px solid #d7e0f1;
-     }
-
-     .edit-middle-caption p {
-         padding-top: 10px;
-         font-size: 1.2em;
-         font-weight: 600;
-         color: #000000;
-     }
-
-     .form-good-middle div input[type="file"]{
-         margin: 0;
-         padding: 10px;
-         font-size: 1.2em;
-         font-weight: 500;
-         border: 1px solid #dbe3f1;
-         width: 260px;
-     }
-
-     .form-good-middle div span input[type="submit"] {
-         margin: 0;
-         padding: 13px;
-         font-size: 1.2em;
-         font-weight: 500;
-         color: #ffffff;
-         background-color: #4cb050;
-         border: none;
-         width: 120px;
-         margin-left: 20px;
-     }
-
-     .form-good-middle div span input[type="submit"]:hover {
-         background-color: #22b628;
-     }
-
-     .edit-middle-img-frame {
-         height: 150px;
-         margin: 20px 0 20px 0;
-     }
-
-     .edit-middle-img-frame div img {
-         max-width: 100%;
-         margin-bottom: 10px;
-     }
-
-     .edit-middle-img-frame div div a img{
-         max-width: 20px;
-         padding-top: 10px;
-     }
-
-     .edit-middle-img-frame div div a, 
-     .edit-middle-img-frame div div a:hover{
-         color: #6e7072;
-         font-size: 1.1em;
-         font-weight: 600;
-         text-decoration: none;
-     }
-
-     .good-edit-relation {
-         padding-bottom: 50px;
-     }
-
-     .goods-relation-select span,
-     .goods-relation-select p{
-         font-size: 1.1em;
-         font-weight: 500;
-         color: #676767;
-     }
-
-     .goods-relation-select p {
-         margin-top: 10px;
-         margin-bottom: 20px;
-     }
-
-     .goods-relation-select select{
-            margin: 0 0 20px 0;
-            padding: 5px;
-            font-size: 1em;
-            font-weight: 500;
-            border: 1px solid #dbe3f1;
-     }
-
-     .goods-relation-select div p img{
-         max-width: 25px;
-         margin-right: 10px;
-     }
-
-     .goods-relation-select div p {
-         padding-bottom: 10px;
-         border-bottom: 1px solid #d7e0f1;
-         width: 90%;
-     }
-
-     .goods-relation-select div p a{
-         color: #282828;
-         font-size: 1.2em;
-         text-decoration: none;
-     }
+            text-decoration: none;
+        }
 }
 
 /*///////////////////TABLET///////////////////*/

@@ -1,6 +1,9 @@
-﻿using shtuki_tuki.domain.Enumerables;
+﻿using System.Web.Helpers;
 using shtuki_tuki.domain.Repository;
 using System.Web.Http;
+using System.Web.Mvc;
+using shtuki_tuki.domain.Entities;
+using shtuki_tuki.web.Infrastructure;
 
 namespace shtuki_tuki.web.Controllers
 {
@@ -8,53 +11,64 @@ namespace shtuki_tuki.web.Controllers
     {
         private readonly GoodsRepository _repositoryGoods = GoodsRepository.Current;
 
-        [HttpGet]
-        public IHttpActionResult GoodCollectionCategory(int category)
+        /// <summary>
+        /// Получение списка товаров с установленным в true свойства Popular
+        /// </summary>
+        /// <returns></returns>
+        [System.Web.Http.AllowAnonymous]
+        [System.Web.Http.HttpGet]
+        public IHttpActionResult Get()
         {
-            var typeCategory = SetCategory(category);
-            var listgoods = _repositoryGoods.GetGoodCollectionCategory(typeCategory);
-
-            return Ok(listgoods);
+            return Ok(_repositoryGoods.GetGoodCollectionPop());
         }
 
-        [HttpGet]
-        public IHttpActionResult GoodCollectionPop()
-        {
-            var listgoods = _repositoryGoods.GetGoodCollectionPop();
-            return Ok(listgoods);
-        }          
-
         /// <summary>
-        /// Установка занчения TypeCategory для коллекции получаемых товаров
+        /// Получение списка товаров определенной категории из каталога
         /// </summary>
-        /// <param name="category">Значение Id элемента перечисления TypeCategory</param>
+        /// <param name="categoryId"></param>
         /// <returns></returns>
-        private TypeCategory SetCategory(int category)
-        {            
-            TypeCategory result = new TypeCategory();
+        [System.Web.Http.AllowAnonymous]
+        [System.Web.Http.HttpGet]
+        public IHttpActionResult Get(int categoryId)
+        {
+            return Ok(_repositoryGoods.GetGoodCollectionCategory(categoryId));
+        }
 
-            if (category.Equals(0))
-            {
-                result = TypeCategory.Doors;
-            }
-            else if (category.Equals(3))
-            {
-                result = TypeCategory.Fixtures;
-            }
-            else if (category.Equals(2))
-            {
-                result = TypeCategory.Furniture;
-            }
-            else if (category.Equals(1))
-            {
-                result = TypeCategory.Stairs;
-            }
-            else if (category.Equals(4))
-            {
-                result = TypeCategory.DesignExp;
-            }
+        [System.Web.Mvc.HttpPost]
+        public JsonResult Post(int categoryId)
+        {
+            //, string name, string descript, string size, string material, decimal price
+            //if (categoryId > 0 && !string.IsNullOrEmpty(name) && price >= 0)
+            //{
+            //    var good = new Good
+            //    {
+            //        Name = name,
+            //        Price = price,
+            //        Discription = descript,
+            //        Material = material,
+            //        Size = size
+            //    };
+                
+            //    return Ok(_repositoryGoods.CreateGood(good, categoryId));
+            //}
 
-            return result;
+            return new JsonResult
+            {
+                Data = BadRequest("Input parameters error"),
+                JsonRequestBehavior = JsonRequestBehavior.AllowGet
+            };
+        }
+
+        [System.Web.Http.HttpPut]
+        public IHttpActionResult Put(int categoryId, int goodId, string name, string descript, string size, string material, decimal price)
+        {
+            return Ok();
+        }
+
+        [System.Web.Http.HttpDelete]
+        public IHttpActionResult Delete(int id)
+        {
+            return Ok();
         }
     }
 }

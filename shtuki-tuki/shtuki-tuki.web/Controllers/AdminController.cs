@@ -23,9 +23,14 @@ namespace shtuki_tuki.web.Controllers
             return View();
         }
 
-        public ActionResult AdminCreateGoods()
+        public JsonResult GoodAvatarUpload(int goodId)
         {
-            return View();
+            if (Request.Files != null)
+            {
+                
+            }
+
+            return new JsonResult();
         }
 
         public ActionResult AdminVideo()

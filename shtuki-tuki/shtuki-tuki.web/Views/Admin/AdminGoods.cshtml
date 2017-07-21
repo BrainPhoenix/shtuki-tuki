@@ -10,78 +10,139 @@
 
 @section Body{
     @Html.Partial("NavigationAdmin")
+
     <div class="admin-panel-goods">
         <div class="container">
             <div class="row">
-                <div class="col-md-12 admin-panel-goods-list">
-                    <div class="col-md-12 goods-nav">
-                        <a href="@Url.Action("Index")"><< Назад</a><span>СПИСОК ТОВАРОВ</span>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="col-md-6 text-left">
-                            <input class="goods-create-view" value="+ ДОБАВИТЬ ТОВАР" type="button" onclick="linkGoodNew()"/>
+                <div class="col-md-12 admin-panel-goods-list vue-admin-goods">
+                    
+                    <!--Section goods list start-->
+                    <div class="col-md-12" v-if="section.sectionGoodsList">
+                        <div class="col-md-6 goods-nav">
+                            <a href="@Url.Action("Index")"><< Назад</a><span>СПИСОК ТОВАРОВ</span>
                         </div>
-                    </div>
-                    <div class="col-md-12">
+                        <div class="col-md-6 text-right goods-nav">
+                            <input class="goods-create-view" value="+ ДОБАВИТЬ ТОВАР" type="button" v-on:click="ViewCreateGood"/>
+                        </div>
                         <div class="col-md-2"></div>
                         <div class="col-md-8 goods-filter-navigation">
                             <ul class="col-md-12 text-justify">
-                                <li><a href="#">Двери</a></li>
-                                <li><a href="#">Лестницы</a></li>
-                                <li><a href="#">Мебель</a></li>
-                                <li><a href="#">Светильники</a></li>
-                                <li><a href="#">Эксперименты дизайнеров</a></li>
+                                <li v-for="category in vmFormCreateGood.categories">
+                                    <a href="#" v-on:click.stop.prevent="GoodsListNav(category.TypeCategory)">{{category.Name}}</a>
+                                </li>
                             </ul>
                         </div>
                         <div class="col-md-2"></div>
                         <div class="col-md-12 goods-all-table">
                             <table class="table">
                                 <thead>
-                                    <tr>
-                                        <th class="text-center">Фото</th>
-                                        <th>Название</th>
-                                        <th>Цена</th>
-                                        <th>Хит</th>
-                                        <th>Новинка</th>
-                                        <th>Популярный</th>
-                                        <th></th>
-                                    </tr>
+                                <tr>
+                                    <th class="text-center">Фото</th>
+                                    <th>Название</th>
+                                    <th>Цена</th>
+                                    <th>Хит</th>
+                                    <th>Новинка</th>
+                                    <th>Популярный</th>
+                                    <th></th>
+                                </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td class="goods-table-img text-center">
-                                            <img src="" alt="Goods Avatar" />
-                                        </td>
-                                        <td class="goods-table-name">{{good.Good.Name}}</td>
-                                        <td class="goods-table-price">{{good.Good.Price}} $</td>
-                                        <td class="goods-table-bool">
-                                            <div class="checkbox">
-                                                <input type="checkbox" id="{{good.Good.HitId}}" ng-model="good.Good.Hit" ng-click="CheckedHit(good.Good.Hit, good.Good.Id)"><label for="{{good.Good.HitId}}"></label>
-                                            </div>
-                                        </td>
-                                        <td class="goods-table-bool">
-                                            <div class="checkbox">
-                                                <input type="checkbox" id="{{good.Good.NewId}}" ng-model="good.Good.New" ng-click="CheckedNew(good.Good.New, good.Good.Id)"><label for="{{good.Good.NewId}}"></label>
-                                            </div>
-                                        </td>
-                                        <td class="goods-table-bool">
-                                            <div class="checkbox">
-                                                <input type="checkbox" id="{{good.Good.PopId}}" ng-model="good.Good.Pop" ng-click="CheckedNew(good.Good.Pop, good.Good.Id)"><label for="{{good.Good.PopId}}"></label>
-                                            </div>
-                                        </td>
-                                        <td class="goods-table-control">
-                                            <p>
-                                                <a href="#" ng-click="EditView(good.Good.Id)"><img src="~/Content/images/site/admin-goods-icon-edit.png" /> Редактировать</a>
-                                            </p>
-                                            <p>
-                                                <a href="#" ng-click="Delete(good.Good.Id)"><img src="~/Content/images/site/admin-goods-icon-delete.png"/> Удалить</a>
-                                            </p>
-                                        </td>
-                                    </tr>
+                                <tr>
+                                    <td class="goods-table-img text-center">
+                                        <img src="" alt="Goods Avatar"/>
+                                    </td>
+                                    <td class="goods-table-name"></td>
+                                    <td class="goods-table-price"> $</td>
+                                    <td class="goods-table-bool">
+                                        <div class="checkbox">
+                                            <input type="checkbox"><label></label>
+                                        </div>
+                                    </td>
+                                    <td class="goods-table-bool">
+                                        <div class="checkbox">
+                                            <input type="checkbox"><label></label>
+                                        </div>
+                                    </td>
+                                    <td class="goods-table-bool">
+                                        <div class="checkbox">
+                                            <input type="checkbox"><label></label>
+                                        </div>
+                                    </td>
+                                    <td class="goods-table-control">
+                                        <p>
+                                            <a href="#"><img src="~/Content/images/site/admin-goods-icon-edit.png"/> Редактировать</a>
+                                        </p>
+                                        <p>
+                                            <a href="#"><img src="~/Content/images/site/admin-goods-icon-delete.png"/> Удалить</a>
+                                        </p>
+                                    </td>
+                                </tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
+                    <!--Section goods list end-->
+
+                    <!--Section goods create start-->
+                    <div class="col-md-12" v-if="section.sectionGoodsCreate">
+                        <form v-on:submit.prevent="SaveCreateGood" enctype="multipart/form-data">
+                            <div class="col-md-12 goods-control-create">
+                                <div class="col-md-6 text-left">
+                                    <h3>СОЗДАНИЕ ТОВАРА</h3>
+                                </div>
+                                <div class="col-md-6 text-right">
+                                    <input type="submit" value="СОХРАНИТЬ"/>
+                                    <input type="button" value="ЗАКРЫТЬ" v-on:click="CloseCreateGood"/>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="col-md-12 goods-create-content">
+                                    <div class="message-create text-danger">
+                                        <p>{{vmFormCreateGood.message}}</p>
+                                    </div>
+                                    <div class="col-md-12 form-group">
+                                        <label>Категория: </label>
+                                        <select v-model="vmFormCreateGood.categoriesSelected">
+                                            <option v-for="category in vmFormCreateGood.categories" v-bind:value="category.TypeCategory">{{category.Name}}</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-12 form-group">
+                                        <label>Название: </label>
+                                        <input type="text" required v-model="vmFormCreateGood.name"/>
+                                    </div>
+                                    <div class="col-md-12 form-group">
+                                        <label>Описание: </label>
+                                        <textarea v-model="vmFormCreateGood.descript"></textarea>
+                                    </div>
+                                    <div class="col-md-12 form-group">
+                                        <label>Размер: </label>
+                                        <input type="text" v-model="vmFormCreateGood.size"/>
+                                        <label>мм</label>
+                                    </div>
+                                    <div class="col-md-12 form-group">
+                                        <label>Дерево: </label>
+                                        <input type="text" v-model="vmFormCreateGood.material"/>
+                                    </div>
+                                    <div class="col-md-12 form-group">
+                                        <label>Цена: </label>
+                                        <input type="number" value="0.00" min="0.00" max="1000000000" step="0.01" v-model="vmFormCreateGood.price"/>
+                                        <label>$</label>
+                                    </div>
+                                    <div class="col-md-12 form-group">
+                                        <label>Выберите фото: </label>
+                                        <input type="file" name="file" id="goodAvatarCreate" style="display: initial;" required />
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!--Section goods create end-->
+
+                    <!--Section good edit start-->
+                    <div class="col-md-12" v-if="section.sectionGoodsEdit">
+                        GoodEdit
+                    </div>
+                    <!--Section good edit start-->
                 </div>
             </div>
         </div>
@@ -90,9 +151,127 @@
 
 @section Scripts{
     <script type="text/javascript">
-        function linkGoodNew() {
-            alert("1");
-            window.location.href = @Url.Action("AdminCreateGoods", "Admin");
+        var section = new Vue({
+            data: {
+                sectionGoodsList: true,
+                sectionGoodsCreate: false,
+                sectionGoodsEdit: false
+            }
+        });
+
+        var vmFormCreateGood = new Vue({
+            data: {
+                categories: null,
+                categoriesSelected: 0,
+                name: '',
+                descript: '',
+                size: '',
+                material: '',
+                price: 0,
+                message: ''
+            },
+            created: function () {
+                $.ajax({
+                    type: 'GET',
+                    url: '/api/WebCategory',
+                    success: function (response) {
+                        console.log(response);
+                        vmFormCreateGood.categories = response;
+                    },
+                    error: function (xhr) {
+                        console.log(xhr.status);
+                    }
+                });
+            }
+        });
+
+        var vmGoodsFunction = new Vue({
+            el: '.vue-admin-goods',
+            methods: {
+                GoodsListNav: function (message) {
+                    alert(message);
+                },
+                ViewCreateGood: function () {
+                    section.sectionGoodsList = false;
+                    section.sectionGoodsCreate = true;
+                    section.sectionGoodsEdit = false;
+                },
+                CloseCreateGood: function () {
+                    section.sectionGoodsCreate = false;
+                    section.sectionGoodsList = true;
+                },
+                SaveCreateGood: function () {
+                    console.log(vmFormCreateGood);
+
+                    var model = {
+                        Name: "Oleg",
+                        Category: 27
+                    };
+
+                    sendAjaxRequest("POST", function (response) {
+                        console.log(response);
+                    }, null, {
+                        post: model
+                    });
+                    
+
+                    //var formData = new FormData();
+                    //formData.append("categoryId", vmFormCreateGood.categoriesSelected);
+                    //formData.append("name", vmFormCreateGood.name);
+                    //formData.append("descript", vmFormCreateGood.descript);
+                    //formData.append("material", vmFormCreateGood.material);
+                    //formData.append("size", vmFormCreateGood.size);
+                    //formData.append("price", vmFormCreateGood.price);
+
+                    //var formDataPhoto = new FormData();
+                    //var fileUpload = $("#goodAvatarCreate").get(0);
+                    //var files = fileUpload.files;
+
+                    //for (var i = 0; i < files.length; i++) {
+                    //    formDataPhoto.append(files[i].name, files[i]);
+                    //}
+
+                    //$.ajax({
+                    //    type: 'POST',
+                    //    url: '/api/WebGoods/Post',
+                    //    data: { categotyId : vmFormCreateGood.categoriesSelected },
+                    //    success: function (response) {
+                    //        console.log(response);
+                    //        if (response > 0) {
+                    //            alert(response);
+                    //            //$.ajax({
+                    //            //    type: 'POST',
+                    //            //    url: '/Admin/GoodAvatarUpload',
+                    //            //    data: formData,
+                    //            //    success: function (response) {
+                    //            //        console.log(response);
+                    //            //        if (response === "Good create") {
+
+                    //            //        }
+                    //            //    },
+                    //            //    error: function (xhr) {
+                    //            //        console.log(xhr.status);
+                    //            //    }
+                    //            //});
+                    //        }
+                    //    },
+                    //    error: function (xhr) {
+                    //        console.log(xhr.status);
+                    //    }
+                    //});
+                }
+            }
+        });
+
+        function sendAjaxRequest(httpMethod, callback, url, reqData) {
+            $.ajax("/api/Web" + (url ? "/" + url : ""), {
+                type: httpMethod,
+                success: callback,
+                data: reqData,
+                contentType: "application/json; charset=utf-8",
+                dataType: "json"
+
+            });
         }
     </script>
 }
